@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS Suporte Tech | Suporte em Informática</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #070b14;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00bfff;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: white;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8% 60px;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop') center/cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    .hero span {
+      color: #00bfff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      color: #cfcfcf;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #00bfff;
+      color: white;
+      box-shadow: 0 0 20px rgba(0,191,255,0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #00a2d8;
+    }
+
+    .btn-secondary {
+      border: 2px solid #00bfff;
+      color: #00bfff;
+    }
+
+    .btn-secondary:hover {
+      background: #00bfff;
+      color: white;
+    }
+
+    section {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #bdbdbd;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #101826;
+      padding: 35px;
+      border-radius: 20px;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #00bfff;
+      box-shadow: 0 0 25px rgba(0,191,255,0.15);
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #00bfff;
+    }
+
+    .service-card p {
+      color: #c7c7c7;
+      line-height: 1.7;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .step {
+      text-align: center;
+      background: #101826;
+      padding: 35px 25px;
+      border-radius: 18px;
+    }
+
+    .step-number {
+      width: 70px;
+      height: 70px;
+      background: #00bfff;
+      margin: auto auto 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .differentials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .diff-item {
+      background: #101826;
+      padding: 25px;
+      border-radius: 15px;
+      border-left: 5px solid #00bfff;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: #101826;
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #0099ff, #005eff);
+      border-radius: 25px;
+      padding: 70px 40px;
+    }
+
+    .cta h2 {
+      font-size: 46px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: auto auto 35px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 40px 8%;
+      text-align: center;
+      background: #05070d;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer p {
+      color: #bdbdbd;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 70px;
+      height: 70px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      z-index: 999;
+      box-shadow: 0 0 20px rgba(37,211,102,0.5);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    @media(max-width: 900px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .cta h2 {
+        font-size: 34px;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">CS Suporte Tech</div>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#suporte">Suporte Remoto</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Seu computador lento ou com problemas?<br><span>Resolva hoje mesmo.</span></h1>
+
+    <p>
+      Atendimento profissional em informática com suporte remoto rápido,
+      manutenção de computadores, instalação de sistemas e otimização completa.
+    </p>
+
+    <div class="buttons">
+      <a href="https://wa.me/5500000000000" class="btn btn-primary">Chamar no WhatsApp</a>
+      <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="section-title">
+    <h2>Serviços Especializados</h2>
+    <p>
+      Soluções rápidas e eficientes para computadores, notebooks, redes e suporte remoto.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Suporte Técnico para Empresas</h3>
+      <p>
+        Atendimento de campo para empresas de outros estados que precisam de técnico local para manutenção, instalação, suporte e visitas técnicas presenciais.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>Formatação</h3>
+      <p>
+        Instalação completa do Windows, drivers, programas essenciais e backup de arquivos.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Suporte Remoto</h3>
+      <p>
+        Resolva problemas sem sair de casa através de atendimento remoto rápido e seguro.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Limpeza e Otimização</h3>
+      <p>
+        Correção de lentidão, limpeza de sistema, remoção de vírus e otimização.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <h3>Redes e Wi‑Fi</h3>
+      <p>
+        Configuração de roteadores, impressoras Wi‑Fi e solução de problemas de internet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="suporte">
+  <div class="section-title">
+    <h2>Como Funciona o Suporte Remoto</h2>
+    <p>
+      Atendimento simples, rápido e seguro em poucos minutos.
+    </p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Contato</h3>
+      <p>Você chama pelo WhatsApp e explica o problema.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Acesso Remoto</h3>
+      <p>Você recebe o aplicativo para acesso remoto seguro.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Suporte</h3>
+      <p>O problema é resolvido em tempo real rapidamente.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">4</div>
+      <h3>Computador Funcionando</h3>
+      <p>Seu equipamento volta funcionando corretamente.</p>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="section-title">
+    <h2>Por Que Escolher a CS Suporte Tech?</h2>
+    <p>
+      Atendimento moderno, transparente e focado na solução rápida do problema.
+    </p>
+  </div>
+
+  <div class="differentials">
+    <div class="diff-item">✔ Atendimento técnico terceirizado para empresas que necessitam de suporte local em Minas Gerais</div>
+    <div class="diff-item">✔ Suporte de campo para empresas com operação nacional</div>
+    <div class="diff-item">✔ Atendimento rápido e humanizado</div>
+    <div class="diff-item">✔ Suporte remoto eficiente</div>
+    <div class="diff-item">✔ Segurança e privacidade</div>
+    <div class="diff-item">✔ Preço acessível</div>
+    <div class="diff-item">✔ Atendimento para iniciantes</div>
+    <div class="diff-item">✔ Suporte profissional</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>O Que os Clientes Dizem</h2>
+  </div>
+
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>
+        “Resolveu meu notebook remotamente muito rápido. Excelente atendimento.”
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>
+        “Meu computador ficou muito mais rápido depois da otimização.”
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>
+        “Atendimento paciente, profissional e explicou tudo certinho.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Precisa de suporte agora?</h2>
+
+    <p>
+      Entre em contato e resolva rapidamente problemas no computador,
+      notebook, internet ou sistema com atendimento profissional.
+    </p>
+
+    <a href="https://wa.me/5500000000000" class="btn btn-primary">
+      Solicitar Atendimento
+    </a>
+  </div>
+</section>
+
+<footer id="contato">
+  <h2>CS Suporte Tech</h2>
+  <br>
+  <p>Atendimento remoto para todo o Brasil.</p>
+  <p>Suporte técnico profissional em informática.</p>
+  <br>
+  <p>WhatsApp: (00) 00000‑0000</p>
+  <p>Email: contato@cssuportetech.com</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5500000000000">
+  💬
+</a>
+
+</body>
+</html>
