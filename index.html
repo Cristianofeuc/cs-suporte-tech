@@ -273,25 +273,25 @@
       color: #bdbdbd;
     }
 
+    /* ESTILO DO BOTÃO FLUTUANTE REVISADO */
     .whatsapp-flutuante {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      width: 70px;
-      height: 70px;
-      background: #25d366 !important;
+      position: fixed !important;
+      bottom: 25px !important;
+      right: 25px !important;
+      width: 70px !important;
+      height: 70px !important;
+      background-color: #25d366 !important;
       border-radius: 50% !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       font-size: 35px !important;
-      color: white !important;
+      color: #ffffff !important;
       z-index: 999999 !important;
       box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
       transition: 0.3s;
       border: none !important;
       cursor: pointer !important;
-      outline: none !important;
     }
 
     .whatsapp-flutuante:hover {
@@ -299,36 +299,16 @@
     }
 
     @media(max-width: 900px) {
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .section-title h2 {
-        font-size: 34px;
-      }
-
-      .cta h2 {
-        font-size: 34px;
-      }
+      .hero h1 { font-size: 42px; }
+      nav { display: none; }
+      .section-title h2 { font-size: 34px; }
+      .cta h2 { font-size: 34px; }
     }
 
     @media(max-width: 600px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+      .hero h1 { font-size: 34px; }
+      .hero p { font-size: 17px; }
+      .btn { width: 100%; text-align: center; }
     }
   </style>
 </head>
@@ -336,7 +316,6 @@
 
 <header>
   <div class="logo">CS Suporte Tech</div>
-
   <nav>
     <a href="#servicos">Serviços</a>
     <a href="#suporte">Suporte Remoto</a>
@@ -348,12 +327,7 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Seu computador lento ou com problemas?<br><span>Resolva hoje mesmo.</span></h1>
-
-    <p>
-      Atendimento profissional em informática com suporte remoto rápido,
-      manutenção de computadores, instalação de sistemas e otimização completa.
-    </p>
-
+    <p>Atendimento profissional em informática com suporte remoto rápido, manutenção de computadores, instalação de sistemas e otimização completa.</p>
     <div class="buttons">
       <button onclick="toggleChatbot(event)" class="btn btn-primary">Chamar no WhatsApp</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
@@ -364,44 +338,28 @@
 <section id="servicos">
   <div class="section-title">
     <h2>Serviços Especializados</h2>
-    <p>
-      Soluções rápidas e eficientes para computadores, notebooks, redes e suporte remoto.
-    </p>
+    <p>Soluções rápidas e eficientes para computadores, notebooks, redes e suporte remoto.</p>
   </div>
-
   <div class="services-grid">
     <div class="service-card">
       <h3>Suporte Técnico para Empresas</h3>
-      <p>
-        Atendimento de campo para empresas de outros estados que precisam de técnico local para manutenção, instalação, suporte e visitas técnicas presenciais.
-      </p>
+      <p>Atendimento de campo para empresas de outros estados que precisam de técnico local para manutenção, instalação, suporte e visitas técnicas presenciais.</p>
     </div>
     <div class="service-card">
       <h3>Formatação</h3>
-      <p>
-        Instalação completa do Windows, drivers, programas essenciais e backup de arquivos.
-      </p>
+      <p>Instalação completa do Windows, drivers, programas essenciais e backup de arquivos.</p>
     </div>
-
     <div class="service-card">
       <h3>Suporte Remoto</h3>
-      <p>
-        Resolva problemas sem sair de casa através de atendimento remoto rápido e seguro.
-      </p>
+      <p>Resolva problemas sem sair de casa através de atendimento remoto rápido e seguro.</p>
     </div>
-
     <div class="service-card">
       <h3>Limpeza e Otimização</h3>
-      <p>
-        Correção de lentidão, limpeza de sistema, remoção de vírus e otimização.
-      </p>
+      <p>Correção de lentidão, limpeza de sistema, remoção de vírus e otimização.</p>
     </div>
-
     <div class="service-card">
       <h3>Redes e Wi‑Fi</h3>
-      <p>
-        Configuração de roteadores, impressoras Wi‑Fi e solução de problemas de internet.
-      </p>
+      <p>Configuração de roteadores, impressoras Wi‑Fi e solução de problemas de internet.</p>
     </div>
   </div>
 </section>
@@ -409,30 +367,24 @@
 <section id="suporte">
   <div class="section-title">
     <h2>Como Funciona o Suporte Remoto</h2>
-    <p>
-      Atendimento simples, rápido e seguro em poucos minutos.
-    </p>
+    <p>Atendimento simples, rápido e seguro em poucos minutos.</p>
   </div>
-
   <div class="steps">
     <div class="step">
       <div class="step-number">1</div>
       <h3>Contato</h3>
       <p>Você chama pelo WhatsApp e explica o problema.</p>
     </div>
-
     <div class="step">
       <div class="step-number">2</div>
       <h3>Acesso Remoto</h3>
       <p>Você recebe o aplicativo para acesso remoto seguro.</p>
     </div>
-
     <div class="step">
       <div class="step-number">3</div>
       <h3>Suporte</h3>
       <p>O problema é resolvido em tempo real rapidamente.</p>
     </div>
-
     <div class="step">
       <div class="step-number">4</div>
       <h3>Computador Funcionando</h3>
@@ -444,11 +396,8 @@
 <section id="diferenciais">
   <div class="section-title">
     <h2>Por Que Escolher a CS Suporte Tech?</h2>
-    <p>
-      Atendimento moderno, transparente e focado na solução rápida do problema.
-    </p>
+    <p>Atendimento moderno, transparente e focado na solução rápida do problema.</p>
   </div>
-
   <div class="differentials">
     <div class="diff-item">✔ Atendimento técnico terceirizado para empresas que necessitam de suporte local em Minas Gerais</div>
     <div class="diff-item">✔ Suporte de campo para empresas com operação nacional</div>
@@ -466,7 +415,6 @@
     <h2>Conheça a CS Suporte Tech</h2>
     <p>Assista ao vídeo de apresentação da empresa.</p>
   </div>
-
   <div style="max-width:800px;margin:auto;">
     <video controls preload="metadata" style="width:100%;border-radius:15px;">
       <source src="videos/video.mp4" type="video/mp4">
@@ -480,7 +428,6 @@
     <h2>Galeria de Serviços</h2>
     <p>Alguns trabalhos realizados pela CS Suporte Tech.</p>
   </div>
-
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
     <div>
       <img src="imagens/casas bahia.jpg" style="width:100%;border-radius:15px;">
@@ -497,18 +444,15 @@
   <div class="section-title">
     <h2>O Que os Clientes Dizem</h2>
   </div>
-
   <div class="testimonials">
     <div class="testimonial">
       <div class="stars">★★★★★</div>
       <p>“Resolveu meu notebook remotamente muito rápido. Excelente atendimento.”</p>
     </div>
-
     <div class="testimonial">
       <div class="stars">★★★★★</div>
       <p>“Meu computador ficou muito mais rápido depois da otimização.”</p>
     </div>
-
     <div class="testimonial">
       <div class="stars">★★★★★</div>
       <p>“Atendimento paciente, profissional e explicou tudo certinho.”</p>
@@ -519,10 +463,7 @@
 <section>
   <div class="cta">
     <h2>Precisa de suporte agora?</h2>
-    <p>
-      Entre em contato e resolva rapidamente problemas no computador,
-      notebook, internet ou sistema com atendimento profissional.
-    </p>
+    <p>Entre em contato e resolva rapidamente problemas no computador, notebook, internet ou sistema com atendimento profissional.</p>
     <button onclick="toggleChatbot(event)" class="btn btn-primary">Solicitar Atendimento</button>
   </div>
 </section>
@@ -539,4 +480,93 @@
   <p>Email: cristianosuporte@grumari.com.br</p>
 </footer>
 
-<div id="tech-chatbot" style
+<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 310px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0e0e0;">
+    <div style="background: #00bfff; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd;">
+        <span>🤖 Assistente CS Tech</span>
+        <button onclick="toggleChatbot(event)" style="background: none; border: none; color: #070b14; font-size: 22px; cursor: pointer; font-weight: bold;">×</button>
+    </div>
+    <div id="chatbot-body" style="padding: 15px; max-height: 280px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #222;">
+        <div id="chatbot-content"></div>
+    </div>
+</div>
+
+<button class="whatsapp-flutuante" onclick="toggleChatbot(event)">
+  💬
+</button>
+
+<script>
+function carregarMenuInicial() {
+    var content = document.getElementById('chatbot-content');
+    content.innerHTML = `
+        <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: left;">
+            Olá! Bem-vindo à CS Suporte Tech. O seu problema atual é relacionado a Hardware, Software ou Redes?
+        </div>
+        <div id="chatbot-options">
+            <button onclick="escolherOpcao('hardware')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Peças / Não liga)</button>
+            <button onclick="escolherOpcao('software')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Computador Lento</button>
+            <button onclick="escolherOpcao('redes')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Internet / Wi-Fi</button>
+        </div>
+    `;
+}
+
+carregarMenuInicial();
+
+function toggleChatbot(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    var chat = document.getElementById('tech-chatbot');
+    if (chat.style.display === 'none' || chat.style.display === '') {
+        chat.style.display = 'flex';
+    } else {
+        chat.style.display = 'none';
+    }
+}
+
+function escolherOpcao(opcao) {
+    var content = document.getElementById('chatbot-content');
+    var body = document.getElementById('chatbot-body');
+    
+    var textoCliente = "";
+    if(opcao === 'hardware') textoCliente = "💻 Hardware (Peças / Não liga)";
+    if(opcao === 'software') textoCliente = "⚙️ Software / Computador Lento";
+    if(opcao === 'redes') textoCliente = "🌐 Redes / Internet / Wi-Fi";
+    
+    content.innerHTML = `<div style="background: #00bfff; color: #070b14; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: right; margin-left: 30px; font-weight: 500;">${textoCliente}</div>`;
+    
+    setTimeout(function() {
+        if (opcao === 'software') {
+            content.innerHTML += `
+                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para falar diretamente com o técnico no WhatsApp.
+                </div>
+                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar no WhatsApp</a>
+            `;
+        } else if (opcao === 'hardware') {
+            content.innerHTML += `
+                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                    Entendido. Problemas de hardware requerem uma análise mais detalhada dos componentes. Clique abaixo para detalhar o defeito no WhatsApp.
+                </div>
+                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20um%20problema%20de%20Hardware%20no%20meu%20equipamento." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar no WhatsApp</a>
+            `;
+        } else if (opcao === 'redes') {
+            content.innerHTML += `
+                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                    Certo! Problemas de conexão ou Wi-Fi podem ser configuração de roteadores ou cabeamento. Clique abaixo para iniciar o suporte técnico.
+                </div>
+                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/Wi-Fi." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar no WhatsApp</a>
+            `;
+        }
+        
+        content.innerHTML += `
+            <button onclick="carregarMenuInicial()" style="display: block; width: 100%; background: none; border: none; color: #555; text-align: center; padding: 8px; margin-top: 15px; cursor: pointer; font-size: 13px; text-decoration: underline; font-family: inherit; font-weight: 500;">&larr; Voltar para o menu</button>
+        `;
+        
+        body.scrollTop = body.scrollHeight;
+    }, 500);
+}
+</script>
+
+</body>
+</html>
