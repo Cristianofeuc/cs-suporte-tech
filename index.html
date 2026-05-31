@@ -273,7 +273,6 @@
       color: #bdbdbd;
     }
 
-    /* ESTILO DO BALÃO FLUTUANTE DO WHATSAPP REFEITO PARA NÃO SUMIR */
     .whatsapp-flutuante {
       position: fixed;
       bottom: 25px;
@@ -287,7 +286,7 @@
       justify-content: center !important;
       font-size: 35px !important;
       color: white !important;
-      z-index: 999999 !important; /* Joga o botão totalmente para a frente de tudo */
+      z-index: 999999 !important;
       box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
       transition: 0.3s;
       border: none !important;
@@ -540,33 +539,4 @@
   <p>Email: cristianosuporte@grumari.com.br</p>
 </footer>
 
-<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 310px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0e0e0;">
-    <div style="background: #00bfff; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd;">
-        <span>🤖 Assistente CS Tech</span>
-        <button onclick="toggleChatbot(event)" style="background: none; border: none; color: #070b14; font-size: 22px; cursor: pointer; font-weight: bold;">×</button>
-    </div>
-    <div id="chatbot-body" style="padding: 15px; max-height: 280px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #222;">
-        <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: left;">
-            Olá! Bem-vindo à CS Suporte Tech. O seu problema atual é relacionado a Hardware, Software ou Redes?
-        </div>
-        <div id="chatbot-options">
-            <button onclick="escolherOpcao('hardware')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Peças / Não liga)</button>
-            <button onclick="escolherOpcao('software')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Computador Lento</button>
-            <button onclick="escolherOpcao('redes')" style="display: block; width: 100%; background: #fff; border: 1px solid #00bfff; color: #070b14; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Internet / Wi-Fi</button>
-        </div>
-    </div>
-</div>
-
-<button class="whatsapp-flutuante" onclick="toggleChatbot(event)">
-  💬
-</button>
-
-<script>
-function toggleChatbot(e) {
-    if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    var chat = document.getElementById('tech-chatbot');
-    if (chat.style.display === 'none' || chat.style.display === '') {
-        chat.style.display = 'flex
+<div id="tech-chatbot" style
