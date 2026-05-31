@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CS Suporte Tech | Field Service & Suporte em Informática</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -226,6 +227,33 @@
       border-left: 5px solid #00bfff;
     }
 
+    .partners-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      background: #101826;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .partner-logo {
+      max-width: 160px;
+      max-height: 60px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(0.8);
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(0%) brightness(1);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
     .testimonials {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -308,6 +336,7 @@
       .hero h1 { font-size: 30px; }
       .hero p { font-size: 16px; }
       .btn { width: 100%; text-align: center; }
+      .partners-grid { gap: 30px; padding: 25px; }
     }
   </style>
 </head>
@@ -334,6 +363,25 @@
   </div>
 </section>
 
+<!-- SEÇÃO DE PARCEIROS COM DESCRIÇÃO DE ATENDIMENTO REMOTO/CAMPO -->
+<section id="parceiros" style="padding: 60px 8% 40px;">
+  <div class="section-title" style="margin-bottom: 40px;">
+    <p style="text-transform: uppercase; letter-spacing: 2px; color: #00bfff; font-size: 14px; font-weight: 600;">Confiança & Compliance</p>
+    <h2 style="font-size: 32px; margin-top: 5px;">Empresas que atendemos na região</h2>
+  </div>
+  <div class="partners-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+    
+    <!-- Bloco da AOLBR -->
+    <div style="text-align: center; max-width: 320px;">
+      <img src="imagens/aolbr.png" alt="AOLBR" class="partner-logo" style="margin-bottom: 5px;">
+      <p style="color: #bdbdbd; font-size: 14px; font-weight: 500; line-height: 1.4;">
+        Suporte de campo local e Field Service sob demanda em parceria com a central de atendimento remoto.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <section id="servicos">
   <div class="section-title">
     <h2>Serviços Especializados & Field Service</h2>
@@ -346,11 +394,11 @@
     </div>
     <div class="service-card">
       <h3>Infraestrutura e Redes</h3>
-      <p>Configuração estruturada de switches, roteadores corporativos, access points corporativos, cabeamento de rede</p>
+      <p>Configuração estruturada de switches, roteadores corporativos, access points corporativos, cabeamento de rede e resolução de problemas complexos de internet/Wi-Fi.</p>
     </div>
     <div class="service-card">
       <h3>Manutenção & Hardware Avançado</h3>
-      <p>Diagnósticos precisos em placas-mãe, substituição de componentes e upgrades estruturados para manter a produtividade da sua empresa no topo.</p>
+      <p>Diagnósticos precisos em placas-mãe, reparos eletrônicos, substituição de componentes e upgrades estruturados para manter a produtividade da sua empresa no topo.</p>
     </div>
     <div class="service-card">
       <h3>Formatação e Otimização de OS</h3>
@@ -460,7 +508,7 @@
 <section>
   <div class="cta">
     <h2>Precisa de um Técnico de Campo Local?</h2>
-    <p>Seja para suporte emergencial ou parcerias recorrentes de Field Service, conte com os seus "olhos e mãos" na infraestrutura de TI da região.</p>
+    <p>Seja para suporte emergencial ou parcerias reuniões recorrentes de Field Service, conte com os seus "olhos e mãos" na infraestrutura de TI da região.</p>
     <button onclick="toggleChatbot(event)" class="btn btn-primary">Acionar Suporte Técnico</button>
   </div>
 </section>
@@ -477,6 +525,9 @@
   <p>Email: cristianosuporte@grumari.com.br</p>
 </footer>
 
+<!-- ========================================== -->
+<!-- JANELA DO CHATBOT -->
+<!-- ========================================== -->
 <div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 320px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0e0e0;">
     <div style="background: #00bfff; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd;">
         <span>🤖 Assistente CS Tech</span>
@@ -492,7 +543,6 @@
 </button>
 
 <script>
-// MENU INICIAL ALTERADO COM FOCO CORPORATIVO/FIELD SERVICE DESTACADO
 function carregarMenuInicial() {
     var content = document.getElementById('chatbot-content');
     content.innerHTML = `
@@ -541,7 +591,7 @@ function escolherOpcao(opcao) {
                 <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
                     Excelente! Atuamos como seu <strong>braço operacional e suporte local de campo</strong> na região. Clique abaixo para alinhar escopo, SLA e credenciamento diretamente no WhatsApp corporativo.
                 </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Gostaria%20de%20alinhar%20um%20atendimento%20de%20Field%20Service%20/%20Parceria%20técnica%20na%20sua%20região." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar sobre Field Service</a>
+                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Gostaria%20de%20alinhar%20un%20atendimento%20de%20Field%20Service%20/%20Parceria%20técnica%20na%20sua%20região." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar sobre Field Service</a>
             `;
         } else if (opcao === 'software') {
             content.innerHTML += `
