@@ -110,12 +110,14 @@
       font-weight: 600;
       transition: 0.3s;
       display: inline-block;
+      cursor: pointer;
     }
 
     .btn-primary {
       background: #00bfff;
       color: white;
       box-shadow: 0 0 20px rgba(0,191,255,0.4);
+      border: none;
     }
 
     .btn-primary:hover {
@@ -126,6 +128,7 @@
     .btn-secondary {
       border: 2px solid #00bfff;
       color: #00bfff;
+      background: transparent;
     }
 
     .btn-secondary:hover {
@@ -270,26 +273,26 @@
       color: #bdbdbd;
     }
 
-    /* ESTILO DO BOTÃO FLUTUANTE DO CHATBOT */
+    /* ESTILO DO BALÃO FLUTUANTE DO WHATSAPP REFEITO PARA NÃO SUMIR */
     .whatsapp-flutuante {
       position: fixed;
       bottom: 25px;
       right: 25px;
       width: 70px;
       height: 70px;
-      background: #25d366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: white;
-      z-index: 999;
-      box-shadow: 0 0 20px rgba(37,211,102,0.5);
+      background: #25d366 !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 35px !important;
+      color: white !important;
+      z-index: 999999 !important; /* Joga o botão totalmente para a frente de tudo */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
       transition: 0.3s;
-      border: none;
-      cursor: pointer;
-      outline: none;
+      border: none !important;
+      cursor: pointer !important;
+      outline: none !important;
     }
 
     .whatsapp-flutuante:hover {
@@ -349,11 +352,11 @@
 
     <p>
       Atendimento profissional em informática com suporte remoto rápido,
-      manutenção de computadores, installation de sistemas e otimização completa.
+      manutenção de computadores, instalação de sistemas e otimização completa.
     </p>
 
     <div class="buttons">
-      <a href="https://wa.me/5532998463727" class="btn btn-primary">Chamar no WhatsApp</a>
+      <button onclick="toggleChatbot(event)" class="btn btn-primary">Chamar no WhatsApp</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
     </div>
   </div>
@@ -521,7 +524,7 @@
       Entre em contato e resolva rapidamente problemas no computador,
       notebook, internet ou sistema com atendimento profissional.
     </p>
-    <a href="https://wa.me/5532998463727" class="btn btn-primary">Solicitar Atendimento</a>
+    <button onclick="toggleChatbot(event)" class="btn btn-primary">Solicitar Atendimento</button>
   </div>
 </section>
 
@@ -537,7 +540,7 @@
   <p>Email: cristianosuporte@grumari.com.br</p>
 </footer>
 
-<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 310px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 9999; display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0e0e0;">
+<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 310px; background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0e0e0;">
     <div style="background: #00bfff; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd;">
         <span>🤖 Assistente CS Tech</span>
         <button onclick="toggleChatbot(event)" style="background: none; border: none; color: #070b14; font-size: 22px; cursor: pointer; font-weight: bold;">×</button>
@@ -566,52 +569,4 @@ function toggleChatbot(e) {
     }
     var chat = document.getElementById('tech-chatbot');
     if (chat.style.display === 'none' || chat.style.display === '') {
-        chat.style.display = 'flex';
-    } else {
-        chat.style.display = 'none';
-    }
-}
-
-function escolherOpcao(opcao) {
-    var body = document.getElementById('chatbot-body');
-    var options = document.getElementById('chatbot-options');
-    
-    options.style.display = 'none';
-    
-    var textoCliente = "";
-    if(opcao === 'hardware') textoCliente = "💻 Hardware (Peças / Não liga)";
-    if(opcao === 'software') textoCliente = "⚙️ Software / Computador Lento";
-    if(opcao === 'redes') textoCliente = "🌐 Redes / Internet / Wi-Fi";
-    
-    body.innerHTML += `<div style="background: #00bfff; color: #070b14; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: right; margin-left: 30px; font-weight: 500;">${textoCliente}</div>`;
-    
-    setTimeout(function() {
-        if (opcao === 'software') {
-            body.innerHTML += `
-                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para falar diretamente com o técnico Cristiano no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px;">Falar no WhatsApp</a>
-            `;
-        } else if (opcao === 'hardware') {
-            body.innerHTML += `
-                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
-                    Entendido. Problemas de hardware requerem uma análise mais detalhada dos componentes. Clique abaixo para detalhar o defeito para o Cristiano no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20um%20problema%20de%20Hardware%20no%20meu%20equipamento." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px;">Falar no WhatsApp</a>
-            `;
-        } else if (opcao === 'redes') {
-            body.innerHTML += `
-                <div style="background: #f1f1f1; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
-                    Certo! Problemas de conexão ou Wi-Fi podem ser configuração de roteadores ou cabeamento. Clique abaixo para iniciar o suporte técnico com o Cristiano.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/Wi-Fi." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px;">Falar no WhatsApp</a>
-            `;
-        }
-        body.scrollTop = body.scrollHeight;
-    }, 800);
-}
-</script>
-
-</body>
-</html>
+        chat.style.display = 'flex
