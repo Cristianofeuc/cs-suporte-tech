@@ -74,7 +74,6 @@
       color: #00bfff;
     }
     
-    /* Linha decorativa animada no menu */
     nav a::after {
       content: '';
       position: absolute;
@@ -89,24 +88,28 @@
       width: 100%;
     }
 
+    /* ALTERAÇÕES DE DESIGN NA SEÇÃO HERO (DUAS COLUNAS) */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 8% 60px;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 140px 8% 80px;
       background:
-        linear-gradient(rgba(7, 11, 20, 0.85), rgba(7, 11, 20, 0.95)),
+        linear-gradient(rgba(7, 11, 20, 0.88), rgba(7, 11, 20, 0.96)),
         url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop') center/cover;
     }
 
     .hero-content {
-      max-width: 750px;
+      flex: 1.2;
+      max-width: 680px;
     }
 
     .hero h1 {
-      font-size: 50px;
-      line-height: 1.2;
-      margin-bottom: 25px;
+      font-size: 46px;
+      line-height: 1.35; /* Desafoga as palavras antes amontoadas */
+      margin-bottom: 30px; /* Mais espaço de respiro antes do parágrafo */
       color: #ffffff;
       animation: surgirSubindo 0.8s ease-out forwards;
     }
@@ -116,9 +119,9 @@
     }
 
     .hero p {
-      font-size: 19px;
-      line-height: 1.7;
-      margin-bottom: 35px;
+      font-size: 18px;
+      line-height: 1.8; /* Aumenta a legibilidade do bloco explicativo */
+      margin-bottom: 40px; /* Excelente espaçamento antes dos botões de ação */
       color: #cccccc;
       animation: surgirSubindo 1s ease-out forwards;
     }
@@ -128,6 +131,29 @@
       gap: 20px;
       flex-wrap: wrap;
       animation: surgirSubindo 1.2s ease-out forwards;
+    }
+
+    /* NOVA COLUNA VISUAL À DIREITA COM O TÉCNICO */
+    .hero-visual {
+      flex: 0.9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: surgirSubindo 1.2s ease-out forwards;
+    }
+
+    .hero-visual img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 191, 255, 0.18);
+      border: 1px solid rgba(0, 191, 255, 0.25);
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .hero-visual img:hover {
+      transform: scale(1.02);
+      border-color: #00bfff;
     }
 
     .btn {
@@ -418,7 +444,6 @@
       filter: brightness(1.1);
     }
 
-    /* ESTRUTURA DE ANIMAÇÕES CSS (KEYFRAMES) */
     @keyframes surgirSubindo {
       from {
         opacity: 0;
@@ -451,7 +476,6 @@
       }
     }
 
-    /* Classe auxiliar para animação de scroll suave */
     .animar-surgir {
       opacity: 0;
       transform: translateY(40px);
@@ -463,8 +487,30 @@
       transform: translateY(0);
     }
 
-    @media(max-width: 900px) {
+    /* RESPONSIVIDADE ADAPTADA PARA DUAS COLUNAS */
+    @media(max-width: 1024px) {
+      .hero {
+        gap: 30px;
+      }
       .hero h1 { font-size: 38px; }
+    }
+
+    @media(max-width: 950px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 130px;
+        justify-content: center;
+      }
+      .hero-content {
+        max-width: 100%;
+      }
+      .hero-visual {
+        display: none; /* Oculta a imagem em celulares/tablets para focar totalmente na conversão do texto */
+      }
+      .buttons {
+        justify-content: center;
+      }
       nav { display: none; }
       .section-title h2 { font-size: 34px; }
       .cta h2 { font-size: 34px; }
@@ -498,6 +544,11 @@
       <button onclick="toggleChatbot(event)" class="btn btn-primary">Seja Nosso Parceiro Técnico</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
     </div>
+  </div>
+
+  <!-- COLUNA DA DIREITA ATUALIZADA: IMAGEM DE UM TÉCNICO NEGRO EM MANUTENÇÃO AVANÇADA -->
+  <div class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop" alt="Profissional técnico de hardware realizando manutenção com precisão eletrônica">
   </div>
 </section>
 
@@ -764,7 +815,7 @@ function escolherOpcao(opcao) {
         } else if (opcao === 'software') {
             content.innerHTML += `
                 <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
+                    Perfeito! Já tentou reiniciar o equipamento? Se o problem persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
                 </div>
                 <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
             `;
@@ -792,7 +843,6 @@ function escolherOpcao(opcao) {
     }, 500);
 }
 
-// SCRIPT SUTIL PARA FAZER OS ELEMENTOS SURGIREM AO ROLAR A PÁGINA (IntersectionObserver)
 document.addEventListener("DOMContentLoaded", function() {
   var elementos = document.querySelectorAll('.animar-surgir');
   
@@ -802,7 +852,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entry.target.classList.add('visivel');
       }
     });
-  }, { threshold: 0.15 }); // Ativa quando 15% do elemento estiver na tela
+  }, { threshold: 0.15 });
   
   elementos.forEach(function(el) {
     observer.observe(el);
