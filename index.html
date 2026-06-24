@@ -49,12 +49,17 @@
       z-index: 1000;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      animation: deslizarAbaixo 0.6s ease-out;
     }
 
     .logo {
       font-size: 28px;
       font-weight: 700;
       color: #00bfff;
+      transition: 0.3s;
+    }
+    .logo:hover {
+      text-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
     }
 
     nav a {
@@ -62,10 +67,26 @@
       color: #ffffff;
       transition: 0.3s;
       font-weight: 500;
+      position: relative;
     }
 
     nav a:hover {
       color: #00bfff;
+    }
+    
+    /* Linha decorativa animada no menu */
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #00bfff;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
     }
 
     .hero {
@@ -87,6 +108,7 @@
       line-height: 1.2;
       margin-bottom: 25px;
       color: #ffffff;
+      animation: surgirSubindo 0.8s ease-out forwards;
     }
 
     .hero span {
@@ -98,19 +120,21 @@
       line-height: 1.7;
       margin-bottom: 35px;
       color: #cccccc;
+      animation: surgirSubindo 1s ease-out forwards;
     }
 
     .buttons {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      animation: surgirSubindo 1.2s ease-out forwards;
     }
 
     .btn {
       padding: 15px 30px;
       border-radius: 12px;
       font-weight: 600;
-      transition: 0.3s;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       display: inline-block;
       cursor: pointer;
     }
@@ -123,8 +147,9 @@
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       background: #0099cc;
+      box-shadow: 0 8px 25px rgba(0, 191, 255, 0.5);
     }
 
     .btn-secondary {
@@ -136,6 +161,8 @@
     .btn-secondary:hover {
       background: #00bfff;
       color: #070b14;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
     }
 
     section {
@@ -169,15 +196,15 @@
       background: #0f1626;
       padding: 35px;
       border-radius: 20px;
-      transition: 0.3s;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       border: 1px solid rgba(255, 255, 255, 0.05);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-8px) scale(1.02);
       border-color: #00bfff;
-      box-shadow: 0 10px 25px rgba(0, 191, 255, 0.15);
+      box-shadow: 0 12px 30px rgba(0, 191, 255, 0.2);
     }
 
     .service-card h3 {
@@ -203,6 +230,10 @@
       padding: 35px 25px;
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .step:hover {
+      transform: translateY(-5px);
     }
 
     .step h3 {
@@ -227,6 +258,10 @@
       font-size: 28px;
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
+      transition: transform 0.5s ease;
+    }
+    .step:hover .step-number {
+      transform: rotate(360deg);
     }
 
     .differentials {
@@ -245,6 +280,11 @@
       border-right: 1px solid rgba(255, 255, 255, 0.03);
       border-bottom: 1px solid rgba(255, 255, 255, 0.03);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .diff-item:hover {
+      padding-left: 30px;
+      background: #131d33;
     }
 
     .partners-grid {
@@ -286,6 +326,10 @@
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.05);
       color: #cccccc;
+      transition: 0.3s;
+    }
+    .testimonial:hover {
+      border-color: rgba(0, 191, 255, 0.3);
     }
 
     .stars {
@@ -355,10 +399,68 @@
       transition: 0.3s;
       border: none !important;
       cursor: pointer !important;
+      animation: pulsarBotao 2s infinite;
     }
 
     .whatsapp-flutuante:hover {
       transform: scale(1.1);
+      animation: none;
+    }
+
+    .galeria-img {
+      width:100%;
+      border-radius:15px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .galeria-img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    /* ESTRUTURA DE ANIMAÇÕES CSS (KEYFRAMES) */
+    @keyframes surgirSubindo {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes deslizarAbaixo {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulsarBotao {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Classe auxiliar para animação de scroll suave */
+    .animar-surgir {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .animar-surgir.visivel {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     @media(max-width: 900px) {
@@ -399,27 +501,25 @@
   </div>
 </section>
 
-<section id="parceiros" style="padding: 60px 8% 40px; background: #0b111e;">
+<section id="parceiros" class="animar-surgir" style="padding: 60px 8% 40px; background: #0b111e;">
   <div class="section-title" style="margin-bottom: 40px;">
     <p style="text-transform: uppercase; letter-spacing: 2px; color: #00bfff; font-size: 14px; font-weight: 600;">Confiança & Compliance</p>
     <h2 style="font-size: 32px; margin-top: 5px;">Empresas que atendemos na região</h2>
   </div>
   <div class="partners-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px; background: #0f1626;">
-    
     <div style="text-align: center; max-width: 450px;">
       <img src="imagens/aolbr.png" alt="AOLBR" class="partner-logo" style="margin-bottom: 15px;">
       <p style="color: #cccccc; font-size: 15px; font-weight: 500; line-height: 1.5;">
         "Trabalhamos com a melhor tecnologia e desenvolvemos soluções inovadoras para criar novas experiências adaptadas às necessidades de nossos clientes."
       </p>
     </div>
-
   </div>
 </section>
 
-<section id="servicos">
+<section id="servicos" class="animar-surgir">
   <div class="section-title">
     <h2>Serviços Especializados & Field Service</h2>
-    <p>Soluções estruturadas para empresas com operation nacional que precisam de suporte técnico de campo local em Minas Gerais, além de atendimento residencial corporativo.</p>
+    <p>Soluções estruturadas para empresas com operação nacional que precisam de suporte técnico de campo local em Minas Gerais, além de atendimento residencial corporativo.</p>
   </div>
   <div class="services-grid">
     <div class="service-card">
@@ -445,7 +545,7 @@
   </div>
 </section>
 
-<section id="suporte-remoto" style="background: #0b111e; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03);">
+<section id="suporte-remoto" class="animar-surgir" style="background: #0b111e; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03);">
   <div class="section-title">
     <p style="text-transform: uppercase; letter-spacing: 2px; color: #00bfff; font-size: 14px; font-weight: 600;">Atendimento Imediato</p>
     <h2>Suporte Remoto Instantâneo</h2>
@@ -453,7 +553,6 @@
   </div>
   
   <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-    
     <div style="background: #0f1626; padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
       <div>
         <div style="font-size: 40px; margin-bottom: 15px;">🔴</div>
@@ -479,11 +578,10 @@
         Baixar TeamViewer
       </a>
     </div>
-
   </div>
 </section>
 
-<section id="suporte">
+<section id="suporte" class="animar-surgir">
   <div class="section-title">
     <h2>Como Funciona a Parceria / Suporte</h2>
     <p>Agilidade e facilidade no alinhamento para resolver problemas críticos em poucos minutos.</p>
@@ -512,7 +610,7 @@
   </div>
 </section>
 
-<section id="diferenciais" style="background: #0b111e;">
+<section id="diferenciais" class="animar-surgir" style="background: #0b111e;">
   <div class="section-title">
     <h2>Por Que Escolher a CS Suporte Tech?</h2>
     <p>Atendimento profissional, compliance corporativo e foco na resolução definitiva do problema.</p>
@@ -527,7 +625,7 @@
   </div>
 </section>
 
-<section id="apresentacao">
+<section id="apresentacao" class="animar-surgir">
   <div class="section-title">
     <h2>Conheça a CS Suporte Tech</h2>
     <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento.</p>
@@ -540,23 +638,23 @@
   </div>
 </section>
 
-<section id="galeria" style="background: #0b111e;">
+<section id="galeria" class="animar-surgir" style="background: #0b111e;">
   <div class="section-title">
     <h2>Galeria de Atendimentos</h2>
     <p>Alguns trabalhos em campo realizados em parcerias corporativas e Field Service.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
     <div style="box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 15px; background: #0f1626; padding: 10px; border: 1px solid rgba(255,255,255,0.05);">
-      <img src="imagens/casas bahia.jpg" style="width:100%;border-radius:10px;">
+      <img src="imagens/casas bahia.jpg" class="galeria-img" style="border-radius:10px;">
       <p style="text-align:center;margin-top:10px; font-weight: 500; color: #ffffff;">Atendimento técnico em loja / Varejo nacional</p>
     </div>
-    <img src="imagens/ferramentas.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <img src="imagens/manutenção placa.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <img src="imagens/toten.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+    <img src="imagens/ferramentas.jpg" class="galeria-img">
+    <img src="imagens/manutenção placa.jpg" class="galeria-img">
+    <img src="imagens/toten.jpg" class="galeria-img">
   </div>
 </section>
 
-<section>
+<section class="animar-surgir">
   <div class="section-title">
     <h2>O Que Nossos Parceiros Dizem</h2>
   </div>
@@ -576,7 +674,7 @@
   </div>
 </section>
 
-<section>
+<section class="animar-surgir">
   <div class="cta">
     <h2>Precisa de um Técnico de Campo Local?</h2>
     <p>Seja para suporte emergencial ou parcerias / reuniões corporativas de Field Service, conte com os seus "olhos e mãos" na infraestrutura de TI da região.</p>
@@ -637,6 +735,7 @@ function toggleChatbot(e) {
     var chat = document.getElementById('tech-chatbot');
     if (chat.style.display === 'none' || chat.style.display === '') {
         chat.style.display = 'flex';
+        chat.style.animation = 'surgirSubindo 0.4s ease-out';
     } else {
         chat.style.display = 'none';
     }
@@ -665,7 +764,7 @@ function escolherOpcao(opcao) {
         } else if (opcao === 'software') {
             content.innerHTML += `
                 <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problem persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
+                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
                 </div>
                 <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
             `;
@@ -692,6 +791,23 @@ function escolherOpcao(opcao) {
         body.scrollTop = body.scrollHeight;
     }, 500);
 }
+
+// SCRIPT SUTIL PARA FAZER OS ELEMENTOS SURGIREM AO ROLAR A PÁGINA (IntersectionObserver)
+document.addEventListener("DOMContentLoaded", function() {
+  var elementos = document.querySelectorAll('.animar-surgir');
+  
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visivel');
+      }
+    });
+  }, { threshold: 0.15 }); // Ativa quando 15% do elemento estiver na tela
+  
+  elementos.forEach(function(el) {
+    observer.observe(el);
+  });
+});
 </script>
 
 </body>
