@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CS Suporte Tech | Field Service & Suporte em Informática</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-E5K7NWKWR1');
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E5K7NWKWR1');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,7 +87,6 @@
       width: 100%;
     }
 
-    /* ALTERAÇÕES DE DESIGN NA SEÇÃO HERO (DUAS COLUNAS) */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -108,8 +106,8 @@
 
     .hero h1 {
       font-size: 46px;
-      line-height: 1.35; /* Desafoga as palavras antes amontoadas */
-      margin-bottom: 30px; /* Mais espaço de respiro antes do parágrafo */
+      line-height: 1.35;
+      margin-bottom: 30px;
       color: #ffffff;
       animation: surgirSubindo 0.8s ease-out forwards;
     }
@@ -120,8 +118,8 @@
 
     .hero p {
       font-size: 18px;
-      line-height: 1.8; /* Aumenta a legibilidade do bloco explicativo */
-      margin-bottom: 40px; /* Excelente espaçamento antes dos botões de ação */
+      line-height: 1.8;
+      margin-bottom: 40px;
       color: #cccccc;
       animation: surgirSubindo 1s ease-out forwards;
     }
@@ -133,7 +131,6 @@
       animation: surgirSubindo 1.2s ease-out forwards;
     }
 
-    /* COLUNA VISUAL À DIREITA COM O TÉCNICO NEGRO REALIZANDO MANUTENÇÃO */
     .hero-visual {
       flex: 0.9;
       display: flex;
@@ -403,8 +400,13 @@
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
+    footer h2 {
+      margin-bottom: 20px;
+    }
+
     footer p {
       color: #aaaaaa;
+      margin-bottom: 10px;
     }
 
     .whatsapp-flutuante {
@@ -487,7 +489,6 @@
       transform: translateY(0);
     }
 
-    /* RESPONSIVIDADE ADAPTADA PARA DUAS COLUNAS */
     @media(max-width: 1024px) {
       .hero {
         gap: 30px;
@@ -506,7 +507,7 @@
         max-width: 100%;
       }
       .hero-visual {
-        display: none; /* Oculta a imagem em celulares/tablets para focar totalmente na conversão do texto */
+        display: none;
       }
       .buttons {
         justify-content: center;
@@ -539,16 +540,15 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Suporte Técnico On-site e Field Service:<br><span>seus "olhos e mãos" na infraestrutura local.</span></h1>
-    <p>Seu braço operational e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
+    <p>Seu braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
     <div class="buttons">
       <button onclick="toggleChatbot(event)" class="btn btn-primary">Seja Nosso Parceiro Técnico</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
     </div>
   </div>
 
-  <!-- COLUNA DA DIREITA: IMAGEM DE UM TÉCNICO NEGRO REALIZANDO MANUTENÇÃO COM FERRAMENTAS DE PRECISÃO -->
   <div class="hero-visual">
-    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9aae9d?q=80&w=600&auto=format&fit=crop" alt="Profissional técnico negro realizando manutenção em hardware com ferramentas de precisão">
+    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9aae9d?q=80&w=600&auto=format&fit=crop" alt="Profissional técnico realizando manutenção em hardware com ferramentas de precisão">
   </div>
 </section>
 
@@ -559,7 +559,7 @@
   </div>
   <div class="partners-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px; background: #0f1626;">
     <div style="text-align: center; max-width: 450px;">
-      <img src="imagens/aolbr.png" alt="AOLBR" class="partner-logo" style="margin-bottom: 15px;">
+      <img src="imagens/aolbr.png" alt="Logo da AOLBR" class="partner-logo" style="margin-bottom: 15px;">
       <p style="color: #cccccc; font-size: 15px; font-weight: 500; line-height: 1.5;">
         "Trabalhamos com a melhor tecnologia e desenvolvemos soluções inovadoras para criar novas experiências adaptadas às necessidades de nossos clientes."
       </p>
@@ -682,7 +682,7 @@
     <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento.</p>
   </div>
   <div style="max-width:800px;margin:auto;box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius:15px;">
-    <video controls preload="metadata" style="width:100%; display: block; border-radius:15px; background: #000;">
+    <video controls preload="metadata" playsinline style="width:100%; display: block; border-radius:15px; background: #000;">
       <source src="videos/video.mp4" type="video/mp4">
       Seu navegador não suporta vídeo.
     </video>
@@ -696,12 +696,12 @@
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
     <div style="box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 15px; background: #0f1626; padding: 10px; border: 1px solid rgba(255,255,255,0.05);">
-      <img src="imagens/casas bahia.jpg" class="galeria-img" style="border-radius:10px;">
+      <img src="imagens/casas bahia.jpg" class="galeria-img" alt="Atendimento técnico presencial em loja de Varejo nacional" style="border-radius:10px;">
       <p style="text-align:center;margin-top:10px; font-weight: 500; color: #ffffff;">Atendimento técnico em loja / Varejo nacional</p>
     </div>
-    <img src="imagens/ferramentas.jpg" class="galeria-img">
-    <img src="imagens/manutenção placa.jpg" class="galeria-img">
-    <img src="imagens/toten.jpg" class="galeria-img">
+    <img src="imagens/ferramentas.jpg" class="galeria-img" alt="Kit de ferramentas de precisão para manutenção de eletrônicos e TI de campo">
+    <img src="imagens/manutenção placa.jpg" class="galeria-img" alt="Reparo técnico avançado em placa-mãe e soldagem de componentes">
+    <img src="imagens/toten.jpg" class="galeria-img" alt="Manutenção e suporte técnico local em totem de autoatendimento digital">
   </div>
 </section>
 
@@ -735,15 +735,13 @@
 
 <footer id="contato">
   <h2>CS Suporte Tech</h2>
-  <br>
   <p>📍 Cataguases - MG</p>
-  <p style="margin-top: 10px; line-height: 1.6; color: #aaaaaa;">Atendimento presencial e Field Service em Cataguases (incluindo Aracati e distritos), Leopoldina, Muriaé, Ubá, Além Paraíba, Astolfo Dutra, Dona Eusébia, Guidoval, Laranjal, Miraí, Piraúba, Recreio, Rodeiro, Santana de Cataguases e toda a região da Zona da Mata.</p>
-  <p style="margin-top: 10px; color: #aaaaaa;">Suporte remoto para empresas e clientes em todo o Brasil.</p>
-  <p style="margin-top: 10px; color: #aaaaaa;">Prestação de serviços especializada em TI corporativa e residencial.</p>
-  <br>
-  <p style="font-weight: 600; color: #00bfff;">WhatsApp: (32) 99846-3727</p>
+  <p style="line-height: 1.6;">Atendimento presencial e Field Service em Cataguases (incluindo Aracati e distritos), Leopoldina, Muriaé, Ubá, Além Paraíba, Astolfo Dutra, Dona Eusébia, Guidoval, Laranjal, Miraí, Piraúba, Recreio, Rodeiro, Santana de Cataguases e toda a região da Zona da Mata.</p>
+  <p>Suporte remoto para empresas e clientes em todo o Brasil.</p>
+  <p>Prestação de serviços especializada em TI corporativa e residencial.</p>
+  <p style="font-weight: 600; color: #00bfff; margin-top: 15px;">WhatsApp: (32) 99846-3727</p>
   <p style="font-weight: 600; color: #00bfff;">Email: cssuporttech@grumari.com.br</p>
-  <p style="margin-top: 15px; color: #aaaaaa; font-size: 14px;">CNPJ: 26.275.653/0001-77</p>
+  <p style="font-size: 14px; margin-top: 15px;">CNPJ: 26.275.653/0001-77</p>
 </footer>
 
 <div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 320px; background: #0f1626; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
@@ -794,7 +792,6 @@ function toggleChatbot(e) {
 
 function chooseOption(opcao) {
     var content = document.getElementById('chatbot-content');
-    var body = document.getElementById('chatbot-body');
     
     var textoCliente = "";
     if(opcao === 'field_service') textoCliente = "🏢 Parceria / Field Service Técnico";
@@ -815,7 +812,7 @@ function chooseOption(opcao) {
         } else if (opcao === 'software') {
             content.innerHTML += `
                 <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
+                    Perfeito! Já tentou reiniciar o equipamento? Se o problem persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
                 </div>
                 <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
             `;
@@ -838,27 +835,8 @@ function chooseOption(opcao) {
         content.innerHTML += `
             <button onclick="carregarMenuInicial()" style="display: block; width: 100%; background: none; border: none; color: #aaa; text-align: center; padding: 8px; margin-top: 15px; cursor: pointer; font-size: 13px; text-decoration: underline; font-family: inherit; font-weight: 500;">&larr; Voltar para o menu</button>
         `;
-        
-        body.scrollTop = body.scrollHeight;
-    }, 500);
+    }, 400);
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  var elementos = document.querySelectorAll('.animar-surgir');
-  
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visivel');
-      }
-    });
-  }, { threshold: 0.15 });
-  
-  elementos.forEach(function(el) {
-    observer.observe(el);
-  });
-});
 </script>
-
 </body>
 </html>
