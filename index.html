@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CS Suporte Tech | Field Service & Suporte em Informática</title>
+  <title>CS Suporte Tech | Field Services & TI na Zona da Mata - Cataguases, Leopoldina, Miraí, Dona Eusébia</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-E5K7NWKWR1');
-  </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E5K7NWKWR1');
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +28,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       background: #070b14;
-      color: #f1f5f9;
+      color: #f3f4f6;
       overflow-x: hidden;
     }
 
@@ -46,45 +47,22 @@
       background: rgba(7, 11, 20, 0.85);
       backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      animation: deslizarAbaixo 0.6s ease-out;
     }
 
     .logo {
       font-size: 28px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #00bfff;
       transition: 0.3s;
-    }
-    .logo:hover {
-      text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
     }
 
     nav a {
       margin-left: 25px;
-      color: #cbd5e1;
-      transition: 0.3s;
+      color: #ffffff;
       font-weight: 500;
       position: relative;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-    
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #38bdf8;
-      transition: width 0.3s ease;
-    }
-    nav a:hover::after {
-      width: 100%;
     }
 
     .hero {
@@ -95,415 +73,80 @@
       gap: 60px;
       padding: 140px 8% 80px;
       background:
-        linear-gradient(rgba(7, 11, 20, 0.85), rgba(7, 11, 20, 0.95)),
-        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop') center/cover;
+        linear-gradient(rgba(7, 11, 20, 0.88), rgba(7, 11, 20, 0.96)),
+        url('imagens/seu-background-autentico.jpg') center/cover; /* Substitua por seu fundo original se preferir */
     }
 
-    .hero-content {
-      flex: 1.2;
-      max-width: 680px;
-    }
+    .hero-content { flex: 1.2; max-width: 680px; }
+    .hero span { color: #00bfff; }
+    .hero-visual { flex: 0.9; }
+    .hero-visual img { max-width: 100%; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 191, 255, 0.18); }
 
-    .hero h1 {
-      font-size: 46px;
-      line-height: 1.35;
-      margin-bottom: 30px;
-      color: #ffffff;
-      animation: surgirSubindo 0.8s ease-out forwards;
-    }
+    .btn { padding: 15px 30px; border-radius: 12px; font-weight: 600; cursor: pointer; }
+    .btn-primary { background: #00bfff; color: #070b14; border: none; }
+    .btn-secondary { border: 2px solid #00bfff; color: #00bfff; background: transparent; }
 
-    .hero span {
-      color: #38bdf8;
-    }
+    section { padding: 100px 8%; }
+    .section-title { text-align: center; margin-bottom: 60px; }
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 40px;
-      color: #94a3b8;
-      animation: surgirSubindo 1s ease-out forwards;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+    .service-card { background: #0f1626; padding: 35px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); }
+    .service-card h3 { color: #00bfff; }
 
-    .buttons {
-      display: flex;
+    /* Estilos para o Grid de Galeria Autêntica */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      flex-wrap: wrap;
-      animation: surgirSubindo 1.2s ease-out forwards;
+      margin-top: 40px;
     }
 
-    .hero-visual {
-      flex: 0.9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: surgirSubindo 1.2s ease-out forwards;
-    }
-
-    .hero-visual img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      transition: transform 0.4s ease, border-color 0.4s ease;
-    }
-
-    .hero-visual img:hover {
-      transform: scale(1.02);
-      border-color: #38bdf8;
-    }
-
-    .btn {
-      padding: 15px 30px;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: #38bdf8;
-      color: #070b14;
-      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
-      border: none;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-4px);
-      background: #0ea5e9;
-      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
-    }
-
-    .btn-secondary {
-      border: 2px solid #38bdf8;
-      color: #38bdf8;
-      background: transparent;
-    }
-
-    .btn-secondary:hover {
-      background: #38bdf8;
-      color: #070b14;
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
-    }
-
-    section {
-      padding: 100px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .section-title p {
-      color: #94a3b8;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: #0f172a;
-      padding: 35px;
-      border-radius: 20px;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      border-color: #38bdf8;
-      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
-    }
-
-    .service-card h3 {
-      margin-bottom: 15px;
-      font-size: 24px;
-      color: #38bdf8;
-    }
-
-    .service-card p {
-      color: #cbd5e1;
-      line-height: 1.7;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-
-    .step {
-      text-align: center;
-      background: #0f172a;
-      padding: 35px 25px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      transition: transform 0.3s ease;
-    }
-    .step:hover {
-      transform: translateY(-5px);
-    }
-
-    .step h3 {
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    .step p {
-      color: #94a3b8;
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: #38bdf8;
-      color: #070b14;
-      margin: auto auto 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
-      transition: transform 0.5s ease;
-    }
-    .step:hover .step-number {
-      transform: rotate(360deg);
-    }
-
-    .differentials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .diff-item {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 25px;
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
       border-radius: 15px;
-      border-left: 5px solid #38bdf8;
-      border-top: 1px solid rgba(255, 255, 255, 0.02);
-      border-right: 1px solid rgba(255, 255, 255, 0.02);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: 0.3s;
-    }
-    .diff-item:hover {
-      padding-left: 30px;
-      background: #1e293b;
-    }
-
-    .partners-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      background: #0f172a;
-      padding: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .partner-logo {
-      max-width: 160px;
-      max-height: 60px;
-      object-fit: contain;
-      filter: grayscale(100%) brightness(1.5);
-      transition: 0.3s;
-      opacity: 0.7;
-    }
-
-    .partner-logo:hover {
-      filter: grayscale(0%) brightness(1);
-      opacity: 1;
-      transform: scale(1.05);
-    }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial {
-      background: #0f172a;
-      padding: 30px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      color: #cbd5e1;
-      transition: 0.3s;
-    }
-    .testimonial:hover {
-      border-color: rgba(56, 189, 248, 0.3);
-    }
-
-    .stars {
-      color: #ffb100;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #0f172a, #070b14);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 25px;
-      padding: 70px 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    .cta h2 {
-      font-size: 46px;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin: auto auto 35px;
-      line-height: 1.7;
-      color: #94a3b8;
-    }
-
-    footer {
-      padding: 60px 8% 40px;
-      text-align: center;
-      background: #020617;
-      color: #ffffff;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    footer h2 {
-      margin-bottom: 20px;
-      color: #38bdf8;
-    }
-
-    footer p {
-      color: #94a3b8;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp-flutuante {
-      position: fixed !important;
-      bottom: 25px !important;
-      right: 25px !important;
-      width: 70px !important;
-      height: 70px !important;
-      background-color: #25d366 !important;
-      border-radius: 50% !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 35px !important;
-      color: #ffffff !important;
-      z-index: 999999 !important;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
-      transition: 0.3s;
-      border: none !important;
-      cursor: pointer !important;
-      animation: pulsarBotao 2s infinite;
-    }
-
-    .whatsapp-flutuante:hover {
-      transform: scale(1.1);
-      animation: none;
-    }
-
-    .galeria-img {
-      width:100%;
-      border-radius:15px; 
       box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.4s ease, filter 0.4s ease;
-    }
-    .galeria-img:hover {
-      transform: scale(1.03);
-      filter: brightness(1.1);
+      transition: transform 0.3s ease;
+      background: #0f1626; /* Fundo para garantir visibilidade */
+      border: 1px solid #00bfff20; /* Borda suave em azul */
     }
 
-    @keyframes surgirSubindo {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .gallery-item img {
+      width: 100%;
+      height: 250px; /* Mantém a proporção e o alinhamento */
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s ease;
     }
 
-    @keyframes deslizarAbaixo {
-      from {
-        transform: translateY(-100%);
-      }
-      to {
-        transform: translateY(0);
-      }
+    .gallery-item:hover { transform: scale(1.02); }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
     }
 
-    @keyframes pulsarBotao {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-
-    @media(max-width: 1024px) {
-      .hero {
-        gap: 30px;
-      }
-      .hero h1 { font-size: 38px; }
-    }
-
+    /* Responsividade para a Galeria em 2 colunas */
     @media(max-width: 950px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 130px;
-        justify-content: center;
-      }
-      .hero-content {
-        max-width: 100%;
-      }
-      .hero-visual {
-        display: none;
-      }
-      .buttons {
-        justify-content: center;
-      }
-      nav { display: none; }
-      .section-title h2 { font-size: 34px; }
-      .cta h2 { font-size: 34px; }
+      .gallery-container { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* Responsividade para 1 coluna */
     @media(max-width: 600px) {
-      .hero h1 { font-size: 30px; }
-      .hero p { font-size: 16px; }
-      .btn { width: 100%; text-align: center; }
-      .partners-grid { gap: 30px; padding: 25px; }
+      .gallery-container { grid-template-columns: 1fr; }
+      .gallery-item img { height: 200px; }
     }
+
+    footer { padding: 60px 8% 40px; text-align: center; background: #03060d; color: #ffffff; }
+
   </style>
 </head>
 <body>
@@ -513,37 +156,56 @@
   <nav>
     <a href="#servicos">Serviços</a>
     <a href="#suporte-remoto">Suporte Remoto</a>
-    <a href="#diferenciais">Diferenciais</a>
+    <a href="#differenciais">Diferenciais</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Suporte Técnico On-site e Field Service:<br><span>seus "olhos e mãos" na infraestrutura local.</span></h1>
-    <p>Seu braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
+    <h1>Suporte Técnico On-site e <span>Field Services</span>:<br>seus "olhos e mãos" na infraestrutura local da Zona da Mata.</h1>
+    <p>Seu braço operacional de TI em Cataguases, Leopoldina, Miraí, Dona Eusébia e região. Garantimos suporte local ágil e qualificado com inteligência alinhada às demandas da sua empresa ou matriz.</p>
     <div class="buttons">
-      <button onclick="toggleChatbot(event)" class="btn btn-primary">Seja Nosso Partner Técnico</button>
+      <button class="btn btn-primary">Seja Nosso Partner Técnico</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
     </div>
   </div>
 
   <div class="hero-visual">
-    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=600&auto=format&fit=crop" alt="Profissional da CS Suporte Tech prestando assistência em equipamentos de TI">
+    <img src="imagens/foto-principal-bancada.jpg" alt="Profissional Cristiano Silva realizando manutenção em bancada de alta precisão">
   </div>
 </section>
 
-<section id="parceiros" style="padding: 60px 8% 40px; background: #0b0f19;">
-  <div class="section-title" style="margin-bottom: 40px;">
-    <p style="text-transform: uppercase; letter-spacing: 2px; color: #38bdf8; font-size: 14px; font-weight: 600;">Confiança & Compliance</p>
-    <h2 style="font-size: 32px; margin-top: 5px;">Empresas que atendemos na região</h2>
+<section id="galeria">
+  <div class="section-title">
+    <h2>Galeria de Atendimentos em Campo</h2>
+    <p>Autenticidade e transparência: Veja evidências dos nossos serviços realizados na Zona da Mata (Cataguases, Leopoldina, Miraí, Dona Eusébia).</p>
   </div>
-  <div class="partners-grid">
-    <div style="text-align: center; max-width: 450px;">
-      <img src="imagens/aolbr.png" alt="Logo da AOLBR" class="partner-logo" style="margin-bottom: 15px;">
-      <p style="color: #cbd5e1; font-size: 15px; font-weight: 500; line-height: 1.5;">
-        "Trabalhamos com a melhor tecnologia e desenvolvemos soluções inovadoras para criar novas experiências adaptadas às necessidades de nossos clientes."
-      </p>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="imagens/meu_atendimento_1.jpg" alt="Técnico Cristiano Silva diagnosticando infraestrutura residencial em Cataguases">
+      <div class="caption">Atendimento Residencial, Cataguases</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagens/manutencao_rack.jpg" alt="Field Service em rack de rede de pequena empresa em Leopoldina">
+      <div class="caption">Infraestrutura de Rede, Leopoldina</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagens/suporte_comercio.jpg" alt="Manutenção em terminal POS de comércio local em Miraí">
+      <div class="caption">Manutenção Comercial, Miraí</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagens/instalacao_wi_fi.jpg" alt="Instalação e configuração de access point corporativo em Dona Eusébia">
+      <div class="caption">Instalação de Wi-Fi, Dona Eusébia</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagens/atendimento_on_site_empresa.jpg" alt="Suporte on-site para estação de trabalho e desktop corporativo em Cataguases">
+      <div class="caption">Suporte On-site, Cataguases</div>
+    </div>
+    <div class="gallery-item">
+      <img src="imagens/atendimento_bancario.jpg" alt="Manutenção em ATM e terminal bancário (Field Services) em Leopoldina">
+      <div class="caption">Atendimento Bancário, Leopoldina</div>
     </div>
   </div>
 </section>
@@ -551,273 +213,24 @@
 <section id="servicos">
   <div class="section-title">
     <h2>Serviços Especializados & Field Service</h2>
-    <p>Soluções estruturadas para empresas com operação nacional que precisam de suporte técnico de campo local em Minas Gerais, além de atendimento residencial corporativo.</p>
+    <p>Soluções estruturadas para empresas com operação nacional que precisam de suporte de campo local em Minas Gerais.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card">
-      <h3>Suporte Técnico & Field Service</h3>
-      <p>Atendimento de campo para empresas, consultorias e integradores de outros estados que precisam de um técnico local qualificado para manutenção de servidores, roteadores, ativos de rede, racks, desktops e visitas sob demanda.</p>
-    </div>
-    <div class="service-card">
-      <h3>Infraestrutura e Redes</h3>
-      <p>Configuração estruturada de switches, roteadores corporativos, access points corporativos, cabeamento de rede.</p>
-    </div>
-    <div class="service-card">
-      <h3>Manutenção & Hardware Avançado</h3>
-      <p>Diagnósticos precisos em placas-mãe, reparos eletrônicos, substituição de componentes e upgrades estruturados para manter a produtividade da sua empresa no topo.</p>
-    </div>
-    <div class="service-card">
-      <h3>Formatação e Otimização de OS</h3>
-      <p>Instalação de sistemas operacionais sob diretrizes corporativas, drivers homologados, pacotes essenciais, segurança da informação e backups preventivos.</p>
-    </div>
-    <div class="service-card">
-      <h3>Suporte Remoto Express</h3>
-      <p>Atendimento remoto rápido e seguro para correção ágil de falhas de software, lentidão e configurações pontuais em sistemas operacionais e ferramentas.</p>
-    </div>
-  </div>
-</section>
-
-<section id="suporte-remoto" style="background: #0b0f19; border-top: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02);">
-  <div class="section-title">
-    <p style="text-transform: uppercase; letter-spacing: 2px; color: #38bdf8; font-size: 14px; font-weight: 600;">Atendimento Imediato</p>
-    <h2>Suporte Remoto Instantâneo</h2>
-    <p>Precisa de auxílio agora? Baixe a nossa ferramenta de suporte autorizado para que possamos conectar e resolver o seu problema com total segurança e agilidade.</p>
-  </div>
-  
-  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-    <div style="background: #0f172a; padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.03); text-align: center; flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-      <div>
-        <div style="font-size: 40px; margin-bottom: 15px;">🔴</div>
-        <h3 style="font-size: 22px; color: #ffffff; margin-bottom: 15px;">Opção 1: AnyDesk</h3>
-        <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
-          A ferramenta mais leve e rápida para suporte em tempo real. Não necessita de instalação complexa, basta baixar e executar.
-        </p>
-      </div>
-      <a href="https://anydesk.com/pt/downloads/windows" target="_blank" class="btn btn-primary" style="background: #ef4444; color: #fff; box-shadow: 0 4px 12px rgba(239,68,68,0.3); width: 100%; text-align: center; border: none;">
-        Baixar AnyDesk
-      </a>
-    </div>
-
-    <div style="background: #0f172a; padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.03); text-align: center; flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-      <div>
-        <div style="font-size: 40px; margin-bottom: 15px;">🔵</div>
-        <h3 style="font-size: 22px; color: #ffffff; margin-bottom: 15px;">Opção 2: TeamViewer</h3>
-        <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
-          Excelente alternativa de padrão corporativo mundial para estabelecer conexões criptografadas de ponta a ponta.
-        </p>
-      </div>
-      <a href="https://www.teamviewer.com/pt-br/download/windows/" target="_blank" class="btn btn-secondary" style="border-color: #3b82f6; color: #3b82f6; width: 100%; text-align: center;">
-        Baixar TeamViewer
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="suporte">
-  <div class="section-title">
-    <h2>Como Funciona a Parceria / Suporte</h2>
-    <p>Agilidade e facilidade no alinhamento para resolver problemas críticos em poucos minutos.</p>
-  </div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-number">1</div>
-      <h3>Abertura / Acionamento</h3>
-      <p>Você entra em contato, envia o escopo do chamado ou necessidade de Field Service.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">2</div>
-      <h3>Alinhamento Técnico</h3>
-      <p>Ajustamos o roteiro, ferramentas necessárias, agendamento ou acesso remoto imediato.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">3</div>
-      <h3>Execução em Campo</h3>
-      <p>Realização do suporte local reportando em tempo real à matriz ou central de monitoramento.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">4</div>
-      <h3>Encerramento e Report</h3>
-      <p>Equipamento ou link operando 100% com validação de funcionamento e documentação do serviço.</p>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais" style="background: #0b0f19;">
-  <div class="section-title">
-    <h2>Por Que Escolher a CS Suporte Tech?</h2>
-    <p>Atendimento profissional, compliance corporativo e foco na resolução definitiva do problema.</p>
-  </div>
-  <div class="differentials">
-    <div class="diff-item">✔ Atendimento técnico terceirizado para empresas que necessitam de suporte local em Minas Gerais</div>
-    <div class="diff-item">✔ Perfeito alinhamento com NOC, Service Desk e Centrais de TI fora do estado</div>
-    <div class="diff-item">✔ Suporte de campo ágil para integradores com operação nacional e redes de varejo</div>
-    <div class="diff-item">✔ Profissional experiente em hardware avançado, soldagem, eletrônica e redes</div>
-    <div class="diff-item">✔ Pontualidade, vestimenta adequada e postura ética frente ao seu cliente final</div>
-    <div class="diff-item">✔ Emissão de relatórios e documentação técnica conforme sua necessidade</div>
-  </div>
-</section>
-
-<section id="apresentacao">
-  <div class="section-title">
-    <h2>Conheça a CS Suporte Tech</h2>
-    <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento.</p>
-  </div>
-  <div style="max-width:800px;margin:auto;box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-radius:15px;">
-    <video controls preload="metadata" playsinline style="width:100%; display: block; border-radius:15px; background: #000;">
-      <source src="videos/video.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-  </div>
-</section>
-
-<section id="galeria" style="background: #0b0f19;">
-  <div class="section-title">
-    <h2>Galeria de Atendimentos</h2>
-    <p>Alguns trabalhos em campo realizados em parcerias corporativas e Field Service.</p>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-    <div style="box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-radius: 15px; background: #0f172a; padding: 10px; border: 1px solid rgba(255,255,255,0.03);">
-      <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop" class="galeria-img" alt="Atendimento técnico presencial em loja de Varejo nacional" style="border-radius:10px;">
-      <p style="text-align:center;margin-top:10px; font-weight: 500; color: #ffffff;">Atendimento técnico em loja / Varejo nacional</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=600&auto=format&fit=crop" class="galeria-img" alt="Kit de ferramentas de precisão para manutenção de eletrônicos e TI de campo">
-    <img src="https://images.unsplash.com/photo-1601524909162-be87252be298?q=80&w=600&auto=format&fit=crop" class="galeria-img" alt="Reparo técnico avançado em placa-mãe e soldagem de componentes">
-    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=600&auto=format&fit=crop" class="galeria-img" alt="Manutenção e suporte técnico local em totem de autoatendimento digital">
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>O Que Nossos Parceiros Dizem</h2>
-  </div>
-  <div class="testimonials">
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Excelente parceiro de Field Service. Atendeu nosso chamado corporativo com muita pontualidade, reportando o status ao nosso NOC em tempo real.”</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Sempre acionamos a CS Suporte Tech para atendimentos na região da Zona da Mata. Profissional ético e muito técnico.”</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Conhecimento técnico diferenciado em eletrônica e redes. Resolve os problemas em campo de verdade.”</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="cta">
-    <h2>Precisa de um Técnico de Campo Local?</h2>
-    <p>Seja para suporte emergencial ou parcerias / reuniões corporativas de Field Service, conte com os seus "olhos e mãos" na infraestrutura de TI da região.</p>
-    <button onclick="toggleChatbot(event)" class="btn btn-primary">Acionar Suporte Técnico</button>
+    <div class="service-card"><h3>Suporte Técnico & Field Service</h3><p>Atendimento de campo terceirizado para manutenção de racks, servidores, ativos e racks sob demanda.</p></div>
+    <div class="service-card"><h3>Infraestrutura e Redes</h3><p>Configuração de switches, roteadores e access points corporativos.</p></div>
+    <div class="service-card"><h3>Manutenção Hardware Avançado</h3><p>Diagnósticos precisos em placas-mãe e reparos eletrônicos.</p></div>
+    <div class="service-card"><h3>Formatação e Otimização</h3><p>Instalação de OS sob diretrizes corporativas e backups preventivos.</p></div>
+    <div class="service-card"><h3>Suporte Remoto Express</h3><p>Atendimento remoto rápido e seguro via WhatsApp/ferramenta autorizada.</p></div>
   </div>
 </section>
 
 <footer id="contato">
   <h2>CS Suporte Tech</h2>
+  <br>
   <p>📍 Cataguases - MG</p>
-  <p style="line-height: 1.6;">Atendimento presencial e Field Service em Cataguases (incluindo Aracati e distritos), Leopoldina, Muriaé, Ubá, Além Paraíba, Astolfo Dutra, Dona Eusébia, Guidoval, Laranjal, Miraí, Piraúba, Recreio, Rodeiro, Santana de Cataguases e toda a região da Zona da Mata.</p>
-  <p>Suporte remoto para empresas e clientes em todo o Brasil.</p>
-  <p>Prestação de serviços especializada em TI corporativa e residencial.</p>
-  <p style="font-weight: 600; color: #38bdf8; margin-top: 15px;">WhatsApp: (32) 99846-3727</p>
-  <p style="font-weight: 600; color: #38bdf8;">Email: cssuporttech@grumari.com.br</p>
-  <p style="font-size: 14px; margin-top: 15px; color: #94a3b8;">CNPJ: 26.275.653/0001-77</p>
+  <p>WhatsApp: (32) 99846-3727</p>
+  <p>Field Services e Atendimentos em Cataguases, Leopoldina, Miraí, Dona Eusébia e Zona da Mata.</p>
 </footer>
 
-<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 320px; background: #0f172a; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-    <div style="background: #38bdf8; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <span>🤖 Assistente CS Tech</span>
-        <button onclick="toggleChatbot(event)" style="background: none; border: none; color: #070b14; font-size: 22px; cursor: pointer; font-weight: bold;">×</button>
-    </div>
-    <div id="chatbot-body" style="padding: 15px; max-height: 320px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #cbd5e1;">
-        <div id="chatbot-content"></div>
-    </div>
-</div>
-
-<button class="whatsapp-flutuante" onclick="toggleChatbot(event)">
-  💬
-</button>
-
-<script>
-function carregarMenuInicial() {
-    var content = document.getElementById('chatbot-content');
-    content.innerHTML = `
-        <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: left; font-weight: 500; color: #f8fafc;">
-            Olá! Bem-vindo à CS Suporte Tech. Como podemos ajudar hoje? Selecione uma opção:
-        </div>
-        <div id="chatbot-options">
-            <button onclick="chooseOption('field_service')" style="display: block; width: 100%; background: #38bdf8; border: none; color: #070b14; padding: 12px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 600; font-family: inherit; box-shadow: 0 2px 8px rgba(56,189,248,0.3);">🏢 Parceria / Field Service Técnico</button>
-            <button onclick="chooseOption('hardware')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Equipamento / Peças)</button>
-            <button onclick="chooseOption('software')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Sistema Lento</button>
-            <button onclick="chooseOption('redes')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.05); color: #cbd5e1; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Infraestrutura / Wi-Fi</button>
-        </div>
-    `;
-}
-
-carregarMenuInicial();
-
-function toggleChatbot(e) {
-    if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    var chat = document.getElementById('tech-chatbot');
-    if (chat.style.display === 'none' || chat.style.display === '') {
-        chat.style.display = 'flex';
-        chat.style.animation = 'surgirSubindo 0.4s ease-out';
-    } else {
-        chat.style.display = 'none';
-    }
-}
-
-function chooseOption(opcao) {
-    var content = document.getElementById('chatbot-content');
-    
-    var textoCliente = "";
-    if(opcao === 'field_service') textoCliente = "🏢 Parceria / Field Service Técnico";
-    if(opcao === 'hardware') textoCliente = "💻 Hardware (Equipamento / Peças)";
-    if(opcao === 'software') textoCliente = "⚙️ Software / Sistema Lento";
-    if(opcao === 'redes') textoCliente = "🌐 Redes / Infraestrutura / Wi-Fi";
-    
-    content.innerHTML = `<div style="background: #38bdf8; color: #070b14; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: right; margin-left: 30px; font-weight: 500;">${textoCliente}</div>`;
-    
-    setTimeout(function() {
-        if (opcao === 'field_service') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #cbd5e1;">
-                    Excelente! Atuamos como seu <strong>braço operacional e suporte local de campo</strong> na região. Clique abaixo para alinhar escopo, SLA e credenciamento diretamente no WhatsApp corporativo.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Gostaria%20de%20alinhar%20um%20atendimento%20de%20Field%20Service%20/%20Parceria%20técnica%20na%20sua%20região." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar sobre Field Service</a>
-            `;
-        } else if (opcao === 'software') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #cbd5e1;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
-            `;
-        } else if (opcao === 'hardware') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #cbd5e1;">
-                    Entendido. Falhas de hardware necessitam de avaliação ou reparo em bancada dos componentes. Clique abaixo para detalhar o defeito no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20um%20problema%20de%20Hardware%20no%20meu%20equipamento." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Solicitar Manutenção</a>
-            `;
-        } else if (opcao === 'redes') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #cbd5e1;">
-                    Certo! Problemas de conectividade ou rede podem envolver ativos ou cabeamento de rede. Clique abaixo para acionar o suporte técnico.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/Wi-Fi." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Ajustar Conexão de Rede</a>
-            `;
-        }
-        
-        content.innerHTML += `
-            <button onclick="carregarMenuInicial()" style="display: block; width: 100%; background: none; border: none; color: #555; text-align: center; padding: 8px; margin-top: 15px; cursor: pointer; font-size: 13px; text-decoration: underline; font-family: inherit; font-weight: 500;">&larr; Voltar para o menu</button>
-        `;
-    }, 400);
-}
-</script>
 </body>
 </html>
