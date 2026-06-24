@@ -133,7 +133,7 @@
       animation: surgirSubindo 1.2s ease-out forwards;
     }
 
-    /* NOVA COLUNA VISUAL À DIREITA COM O TÉCNICO */
+    /* COLUNA VISUAL À DIREITA COM O TÉCNICO NEGRO REALIZANDO MANUTENÇÃO */
     .hero-visual {
       flex: 0.9;
       display: flex;
@@ -539,16 +539,16 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Suporte Técnico On-site e Field Service:<br><span>seus "olhos e mãos" na infraestrutura local.</span></h1>
-    <p>Seu braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
+    <p>Seu braço operational e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
     <div class="buttons">
       <button onclick="toggleChatbot(event)" class="btn btn-primary">Seja Nosso Parceiro Técnico</button>
       <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
     </div>
   </div>
 
-  <!-- COLUNA DA DIREITA ATUALIZADA: IMAGEM DE UM TÉCNICO NEGRO EM MANUTENÇÃO AVANÇADA -->
+  <!-- COLUNA DA DIREITA: IMAGEM DE UM TÉCNICO NEGRO REALIZANDO MANUTENÇÃO COM FERRAMENTAS DE PRECISÃO -->
   <div class="hero-visual">
-    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop" alt="Profissional técnico de hardware realizando manutenção com precisão eletrônica">
+    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9aae9d?q=80&w=600&auto=format&fit=crop" alt="Profissional técnico negro realizando manutenção em hardware com ferramentas de precisão">
   </div>
 </section>
 
@@ -768,10 +768,10 @@ function carregarMenuInicial() {
             Olá! Bem-vindo à CS Suporte Tech. Como podemos ajudar hoje? Selecione uma opção:
         </div>
         <div id="chatbot-options">
-            <button onclick="escolherOpcao('field_service')" style="display: block; width: 100%; background: #00bfff; border: none; color: #070b14; padding: 12px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 600; font-family: inherit; box-shadow: 0 2px 8px rgba(0,191,255,0.2);">🏢 Parceria / Field Service Técnico</button>
-            <button onclick="escolherOpcao('hardware')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Equipamento / Peças)</button>
-            <button onclick="escolherOpcao('software')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Sistema Lento</button>
-            <button onclick="escolherOpcao('redes')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Infraestrutura / Wi-Fi</button>
+            <button onclick="chooseOption('field_service')" style="display: block; width: 100%; background: #00bfff; border: none; color: #070b14; padding: 12px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 600; font-family: inherit; box-shadow: 0 2px 8px rgba(0,191,255,0.2);">🏢 Parceria / Field Service Técnico</button>
+            <button onclick="chooseOption('hardware')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Equipamento / Peças)</button>
+            <button onclick="chooseOption('software')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Sistema Lento</button>
+            <button onclick="chooseOption('redes')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Infraestrutura / Wi-Fi</button>
         </div>
     `;
 }
@@ -792,7 +792,7 @@ function toggleChatbot(e) {
     }
 }
 
-function escolherOpcao(opcao) {
+function chooseOption(opcao) {
     var content = document.getElementById('chatbot-content');
     var body = document.getElementById('chatbot-body');
     
@@ -815,7 +815,7 @@ function escolherOpcao(opcao) {
         } else if (opcao === 'software') {
             content.innerHTML += `
                 <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problem persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
+                    Perfeito! Já tentou reiniciar o equipamento? Se o problema persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
                 </div>
                 <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
             `;
