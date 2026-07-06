@@ -3,698 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CS Suporte Tech | Field Service & Suporte em Informática</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  
+  <title>CS Suporte Tech | Field Service & Suporte Avançado em Informática</title>
+  <meta name="description" content="Braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Suporte de campo especializado, infraestrutura de redes e TI corporativa." />
+  <meta name="keywords" content="field service ti, suporte tecnico cataguases, infraestrutura de redes, ti corporativa, assistencia tecnica minas gerais, suporte remoto" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://seu-usuario.github.io/seu-repositorio/" />
 
-  gtag('config', 'G-E5K7NWKWR1');
-</script>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seu-usuario.github.io/seu-repositorio/" />
+  <meta property="og:title" content="CS Suporte Tech | Field Service & TI Regional" />
+  <meta property="og:description" content="Seus 'olhos e mãos' na infraestrutura local de TI na Zona da Mata mineira." />
+  <meta property="og:image" content="imagens/casas-bahia.jpg" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E5K7NWKWR1');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #070b14;
-      color: #f3f4f6;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(7, 11, 20, 0.85);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: #00bfff;
-    }
-
-    nav a {
-      margin-left: 25px;
-      color: #ffffff;
-      transition: 0.3s;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #00bfff;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 120px 8% 60px;
-      background:
-        linear-gradient(rgba(7, 11, 20, 0.85), rgba(7, 11, 20, 0.95)),
-        url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop') center/cover;
-    }
-
-    .hero-content {
-      max-width: 750px;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      line-height: 1.2;
-      margin-bottom: 25px;
-      color: #ffffff;
-    }
-
-    .hero span {
-      color: #00bfff;
-    }
-
-    .hero p {
-      font-size: 19px;
-      line-height: 1.7;
-      margin-bottom: 35px;
-      color: #cccccc;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 15px 30px;
-      border-radius: 12px;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: #00bfff;
-      color: #070b14;
-      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
-      border: none;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: #0099cc;
-    }
-
-    .btn-secondary {
-      border: 2px solid #00bfff;
-      color: #00bfff;
-      background: transparent;
-    }
-
-    .btn-secondary:hover {
-      background: #00bfff;
-      color: #070b14;
-    }
-
-    section {
-      padding: 100px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-title h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .section-title p {
-      color: #aaaaaa;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: #0f1626;
-      padding: 35px;
-      border-radius: 20px;
-      transition: 0.3s;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: #00bfff;
-      box-shadow: 0 10px 25px rgba(0, 191, 255, 0.15);
-    }
-
-    .service-card h3 {
-      margin-bottom: 15px;
-      font-size: 24px;
-      color: #00bfff;
-    }
-
-    .service-card p {
-      color: #cccccc;
-      line-height: 1.7;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-
-    .step {
-      text-align: center;
-      background: #0f1626;
-      padding: 35px 25px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .step h3 {
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    .step p {
-      color: #aaaaaa;
-    }
-
-    .step-number {
-      width: 70px;
-      height: 70px;
-      background: #00bfff;
-      color: #070b14;
-      margin: auto auto 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);
-    }
-
-    .differentials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .diff-item {
-      background: #0f1626;
-      color: #e5e7eb;
-      padding: 25px;
-      border-radius: 15px;
-      border-left: 5px solid #00bfff;
-      border-top: 1px solid rgba(255, 255, 255, 0.03);
-      border-right: 1px solid rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .partners-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      background: #0f1626;
-      padding: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .partner-logo {
-      max-width: 160px;
-      max-height: 60px;
-      object-fit: contain;
-      filter: grayscale(100%) brightness(1.8);
-      transition: 0.3s;
-      opacity: 0.7;
-    }
-
-    .partner-logo:hover {
-      filter: grayscale(0%) brightness(1);
-      opacity: 1;
-      transform: scale(1.05);
-    }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .testimonial {
-      background: #0f1626;
-      padding: 30px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      color: #cccccc;
-    }
-
-    .stars {
-      color: #ffb100;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #00bfff, #005f9e);
-      border-radius: 25px;
-      padding: 70px 40px;
-      color: #070b14;
-    }
-
-    .cta h2 {
-      font-size: 46px;
-      margin-bottom: 20px;
-      color: #070b14;
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin: auto auto 35px;
-      line-height: 1.7;
-      color: #0f1c30;
-    }
-
-    .cta .btn-primary {
-      background: #070b14;
-      color: #00bfff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    .cta .btn-primary:hover {
-      background: #131c2e;
-    }
-
-    footer {
-      padding: 60px 8% 40px;
-      text-align: center;
-      background: #03060d;
-      color: #ffffff;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    footer p {
-      color: #aaaaaa;
-    }
-
-    .whatsapp-flutuante {
-      position: fixed !important;
-      bottom: 25px !important;
-      right: 25px !important;
-      width: 70px !important;
-      height: 70px !important;
-      background-color: #25d366 !important;
-      border-radius: 50% !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 35px !important;
-      color: #ffffff !important;
-      z-index: 999999 !important;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
-      transition: 0.3s;
-      border: none !important;
-      cursor: pointer !important;
-    }
-
-    .whatsapp-flutuante:hover {
-      transform: scale(1.1);
-    }
-
-    @media(max-width: 900px) {
-      .hero h1 { font-size: 38px; }
-      nav { display: none; }
-      .section-title h2 { font-size: 34px; }
-      .cta h2 { font-size: 34px; }
-    }
-
-    @media(max-width: 600px) {
-      .hero h1 { font-size: 30px; }
-      .hero p { font-size: 16px; }
-      .btn { width: 100%; text-align: center; }
-      .partners-grid { gap: 30px; padding: 25px; }
-    }
-  </style>
+  <link rel="stylesheet" href="variables.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <div class="logo">CS Suporte Tech</div>
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#suporte-remoto">Suporte Remoto</a>
-    <a href="#diferenciais">Diferenciais</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+  <header>
+    <a href="#" class="logo" aria-label="CS Suporte Tech Home">CS Suporte Tech</a>
+    <button class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="nav-menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#suporte-remoto">Suporte Remoto</a>
+      <a href="#suporte">Como Funciona</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Suporte Técnico On-site e Field Service:<br><span>seus "olhos e mãos" na infraestrutura local.</span></h1>
-    <p>Seu braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas da sua empresa ou matriz.</p>
-    <div class="buttons">
-      <button onclick="toggleChatbot(event)" class="btn btn-primary">Seja Nosso Parceiro Técnico</button>
-      <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
-    </div>
-  </div>
-</section>
-
-<section id="parceiros" style="padding: 60px 8% 40px; background: #0b111e;">
-  <div class="section-title" style="margin-bottom: 40px;">
-    <p style="text-transform: uppercase; letter-spacing: 2px; color: #00bfff; font-size: 14px; font-weight: 600;">Confiança & Compliance</p>
-    <h2 style="font-size: 32px; margin-top: 5px;">Empresas que atendemos na região</h2>
-  </div>
-  <div class="partners-grid" style="display: flex; flex-direction: column; align-items: center; gap: 20px; background: #0f1626;">
-    
-    <div style="text-align: center; max-width: 450px;">
-      <img src="imagens/aolbr.png" alt="AOLBR" class="partner-logo" style="margin-bottom: 15px;">
-      <p style="color: #cccccc; font-size: 15px; font-weight: 500; line-height: 1.5;">
-        "Trabalhamos com a melhor tecnologia e desenvolvemos soluções inovadoras para criar novas experiências adaptadas às necessidades de nossos clientes."
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="servicos">
-  <div class="section-title">
-    <h2>Serviços Especializados & Field Service</h2>
-    <p>Soluções estruturadas para empresas com operation nacional que precisam de suporte técnico de campo local em Minas Gerais, além de atendimento residencial corporativo.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>Suporte Técnico & Field Service</h3>
-      <p>Atendimento de campo para empresas, consultorias e integradores de outros estados que precisam de um técnico local qualificado para manutenção de servidores, roteadores, ativos de rede, racks, desktops e visitas sob demanda.</p>
-    </div>
-    <div class="service-card">
-      <h3>Infraestrutura e Redes</h3>
-      <p>Configuração estruturada de switches, roteadores corporativos, access points corporativos, cabeamento de rede.</p>
-    </div>
-    <div class="service-card">
-      <h3>Manutenção & Hardware Avançado</h3>
-      <p>Diagnósticos precisos em placas-mãe, reparos eletrônicos, substituição de componentes e upgrades estruturados para manter a produtividade da sua empresa no topo.</p>
-    </div>
-    <div class="service-card">
-      <h3>Formatação e Otimização de OS</h3>
-      <p>Instalação de sistemas operacionais sob diretrizes corporativas, drivers homologados, pacotes essenciais, segurança da informação e backups preventivos.</p>
-    </div>
-    <div class="service-card">
-      <h3>Suporte Remoto Express</h3>
-      <p>Atendimento remoto rápido e seguro para correção ágil de falhas de software, lentidão e configurações pontuais em sistemas operacionais e ferramentas.</p>
-    </div>
-  </div>
-</section>
-
-<section id="suporte-remoto" style="background: #0b111e; border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03);">
-  <div class="section-title">
-    <p style="text-transform: uppercase; letter-spacing: 2px; color: #00bfff; font-size: 14px; font-weight: 600;">Atendimento Imediato</p>
-    <h2>Suporte Remoto Instantâneo</h2>
-    <p>Precisa de auxílio agora? Baixe a nossa ferramenta de suporte autorizado para que possamos conectar e resolver o seu problema com total segurança e agilidade.</p>
-  </div>
-  
-  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-    
-    <div style="background: #0f1626; padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-      <div>
-        <div style="font-size: 40px; margin-bottom: 15px;">🔴</div>
-        <h3 style="font-size: 22px; color: #ffffff; margin-bottom: 15px;">Opção 1: AnyDesk</h3>
-        <p style="color: #cccccc; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
-          A ferramenta mais leve e rápida para suporte em tempo real. Não necessita de instalação complexa, basta baixar e executar.
-        </p>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Suporte Técnico On-site e Field Service:<br><span>seus "olhos e mãos" na infraestrutura local.</span></h1>
+      <p>Seu braço operacional e Field Service de TI em Cataguases, Zona da Mata e região de Minas Gerais. Garantimos suporte local ágil com inteligência alinhada às demandas estruturadas da sua empresa ou matriz nacional.</p>
+      <div class="buttons">
+        <button onclick="toggleChatbot(event)" class="btn btn-primary" aria-haspopup="dialog">
+          <i class="fa-solid fa-handshake"></i> Seja Nosso Parceiro Técnico
+        </button>
+        <a href="#servicos" class="btn btn-secondary">
+          <i class="fa-solid fa-gears"></i> Ver Serviços
+        </a>
       </div>
-      <a href="https://anydesk.com/pt/downloads/windows" target="_blank" class="btn btn-primary" style="background: #ef4444; color: #fff; box-shadow: 0 4px 12px rgba(239,68,68,0.3); width: 100%; text-align: center; border: none;">
-        Baixar AnyDesk
+    </div>
+  </section>
+
+  <section id="parceiros" class="partners-section">
+    <div class="section-title">
+      <p class="section-subtitle">Confiança & Compliance</p>
+      <h2>Empresas que atendemos na região</h2>
+    </div>
+    <div class="partners-container">
+      <div class="partner-card">
+        <img src="imagens/aolbr.png" alt="Logotipo da empresa parceira AOLBR" class="partner-logo" onerror="this.src='https://via.placeholder.com/160x60/0f1626/00bfff?text=AOLBR'">
+        <blockquote>
+          "Trabalhamos com a melhor tecnologia e desenvolvemos soluções inovadoras para criar novas experiências adaptadas às necessidades de nossos clientes."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="section-title">
+      <h2>Serviços Especializados & Field Service</h2>
+      <p>Soluções estruturadas para empresas com operação nacional que precisam de suporte técnico de campo local em Minas Gerais, além de atendimento residencial de alto padrão corporativo.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>Suporte Técnico & Field Service</h3>
+        <p>Atendimento de campo para empresas, consultorias e integradores de outros estados que precisam de um técnico local qualificado para manutenção de servidores, roteadores, ativos de rede, racks, desktops e visitas sob demanda corporativa.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-route"></i></div>
+        <h3>Infraestrutura e Redes</h3>
+        <p>Configuração estruturada de switches gerenciáveis, roteadores de borda, access points corporativos empresariais e cabeamento de rede estruturado com certificação.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Manutenção & Hardware Avançado</h3>
+        <p>Diagnósticos precisos em placas-mãe, reparos eletrônicos avançados, substituição de componentes SMD/BGA e upgrades de performance estruturados para manter a produtividade.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Formatação e Otimização de OS</h3>
+        <p>Instalação de sistemas operacionais sob diretrizes estritas corporativas, drivers homologados, pacotes essenciais de produtividade, segurança da informação e backups preventivos em nuvem.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>Suporte Remoto Express</h3>
+        <p>Atendimento remoto rápido e criptografado para correção ágil de falhas de software, lentidão crítica e configurações pontuais em sistemas operacionais e ferramentas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="suporte-remoto" class="remote-support-section">
+    <div class="section-title">
+      <p class="section-subtitle">Atendimento Imediato</p>
+      <h2>Suporte Remoto Instantâneo</h2>
+      <p>Precisa de auxílio agora? Baixe a nossa ferramenta de suporte autorizado para que possamos conectar com total criptografia, segurança e agilidade operacional.</p>
+    </div>
+    
+    <div class="remote-cards-container">
+      <div class="remote-card red-theme">
+        <div class="remote-icon"><i class="fa-solid fa-circle-play"></i></div>
+        <h3>Opção 1: AnyDesk</h3>
+        <p>A ferramenta mais leve e rápida para suporte em tempo real. Não necessita de instalação complexa, basta baixar e executar diretamente em sua máquina.</p>
+        <a href="https://anydesk.com/pt/downloads/windows" target="_blank" rel="noopener noreferrer" class="btn btn-download">
+          <i class="fa-solid fa-download"></i> Baixar AnyDesk
+        </a>
+      </div>
+
+      <div class="remote-card blue-theme">
+        <div class="remote-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+        <h3>Opção 2: TeamViewer</h3>
+        <p>Excelente alternativa de padrão corporativo mundial para estabelecer conexões altamente criptografadas e seguras de ponta a ponta.</p>
+        <a href="https://www.teamviewer.com/pt-br/download/windows/" target="_blank" rel="noopener noreferrer" class="btn btn-download">
+          <i class="fa-solid fa-download"></i> Baixar TeamViewer
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="suporte">
+    <div class="section-title">
+      <h2>Como Funciona a Parceria / Suporte</h2>
+      <p>Agilidade e facilidade operacional no alinhamento para resolver problemas críticos de TI em poucos minutos.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Abertura / Acionamento</h3>
+        <p>Você entra em contato corporativo e envia o escopo do chamado ou necessidade técnica de Field Service local.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Alinhamento Técnico</h3>
+        <p>Ajustamos o roteiro operacional, ferramentas necessárias, agendamento em campo ou acesso remoto seguro imediato.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Execução em Campo</h3>
+        <p>Realização do suporte local qualificado, reportando em tempo real à matriz ou central de monitoramento (NOC).</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Encerramento e Report</h3>
+        <p>Equipamento ou link operando 100% com validação de funcionamento, preenchimento de RAT e documentação do serviço.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais" class="differentials-section">
+    <div class="section-title">
+      <h2>Por Que Escolher a CS Suporte Tech?</h2>
+      <p>Atendimento profissional de alto padrão, compliance corporativo e foco absoluto na resolução definitiva do problema.</p>
+    </div>
+    <div class="differentials-grid">
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Atendimento técnico terceirizado com alta eficiência para empresas que necessitam de suporte local em Minas Gerais.</div>
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Perfeito alinhamento com NOC, Service Desk e Centrais de TI localizadas fora do estado.</div>
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Suporte de campo ágil para integradores com operação nacional e grandes redes de varejo.</div>
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Profissional experiente em hardware avançado, microeletrônica, soldagem e infraestrutura de redes.</div>
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Pontualidade rigorosa, vestimenta adequada (EPI se necessário) e postura ética profissional perante seu cliente final.</div>
+      <div class="diff-card"><i class="fa-solid fa-circle-check"></i> Emissão de relatórios fotográficos técnicos detalhados e documentação conforme sua necessidade.</div>
+    </div>
+  </section>
+
+  <section id="apresentacao">
+    <div class="section-title">
+      <h2>Conheça a CS Suporte Tech</h2>
+      <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento regional.</p>
+    </div>
+    <div class="video-wrapper">
+      <video controls preload="metadata" aria-label="Vídeo institucional de apresentação da CS Suporte Tech">
+        <source src="videos/video.mp4" type="video/mp4" />
+        Seu navegador não suporta a reprodução de vídeos nativos.
+      </video>
+    </div>
+  </section>
+
+  <section id="galeria" class="gallery-section">
+    <div class="section-title">
+      <h2>Galeria de Atendimentos Realizados</h2>
+      <p>Alguns trabalhos em campo realizados com sucesso em parcerias corporativas e atendimentos de Field Service.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="imagens/casas bahia.jpg" alt="Atendimento técnico em loja de grande varejo" onerror="this.src='https://via.placeholder.com/400x300/0f1626/00bfff?text=Atendimento+Varejo'">
+        <div class="gallery-overlay">
+          <p>Atendimento técnico em loja / Varejo nacional</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="imagens/ferramentas.jpg" alt="Kit de ferramentas de TI de nível profissional" onerror="this.src='https://via.placeholder.com/400x300/0f1626/00bfff?text=Ferramentas+Profissionais'">
+        <div class="gallery-overlay">
+          <p>Instrumentação e Ferramental Avançado</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="imagens/manutenção placa.jpg" alt="Manutenção eletrônica de hardware avançado em laboratório" onerror="this.src='https://via.placeholder.com/400x300/0f1626/00bfff?text=Manutencao+Eletronica'">
+        <div class="gallery-overlay">
+          <p>Reparo Avançado de Placas e Componentes</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="imagens/toten.jpg" alt="Manutenção de terminal de autoatendimento totem corporativo" onerror="this.src='https://via.placeholder.com/400x300/0f1626/00bfff?text=Manutencao+Totem'">
+        <div class="gallery-overlay">
+          <p>Instalação e Manutenção de Totens / ATM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="section-title">
+      <h2>O Que Nossos Parceiros Dizem</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars" aria-label="Avaliação 5 estrelas">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p>“Excelente parceiro de Field Service. Atendeu nosso chamado corporativo com muita pontualidade, reportando o status ao nosso NOC em tempo real.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars" aria-label="Avaliação 5 estrelas">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p>“Sempre acionamos a CS Suporte Tech para atendimentos na região da Zona da Mata. Profissional ético, transparente e de altíssimo nível técnico.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars" aria-label="Avaliação 5 estrelas">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p>“Conhecimento técnico altamente diferenciado em eletrônica analógica e redes corporativas. Resolve os problemas em campo de verdade de ponta a ponta.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Precisa de um Técnico de Campo Local?</h2>
+      <p>Seja para suporte emergencial complexo ou parcerias permanentes de Field Service, conte com os seus "olhos e mãos" de TI especialistas na infraestrutura da região.</p>
+      <button onclick="toggleChatbot(event)" class="btn btn-primary" aria-haspopup="dialog">
+        <i class="fa-solid fa-circle-phone"></i> Acionar Suporte Técnico
+      </button>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <div class="footer-title">CS Suporte Tech</div>
+    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Cataguases - MG</p>
+    <p class="coverage-text">Atendimento presencial e Field Service especializado em Cataguases (incluindo Aracati e distritos), Leopoldina, Muriaé, Ubá, Além Paraíba, Astolfo Dutra, Dona Eusébia, Guidoval, Laranjal, Miraí, Piraúba, Recreio, Rodeiro, Santana de Cataguases e toda a região da Zona da Mata mineira.</p>
+    <p class="coverage-note">Suporte remoto corporativo para empresas e parceiros em todo o território nacional.</p>
+    <p class="coverage-note">Prestação de serviços especializada e dedicada em TI corporativa e residencial.</p>
+    
+    <div class="footer-contacts">
+      <a href="https://wa.me/5532998463727" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp: (32) 99846-3727
+      </a>
+      <a href="mailto:cssuporttech@grumari.com.br" class="contact-link">
+        <i class="fa-regular fa-envelope"></i> Email: cssuporttech@grumari.com.br
       </a>
     </div>
+    <div class="cnpj-tag">CNPJ: 26.275.653/0001-77</div>
+  </footer>
 
-    <div style="background: #0f1626; padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-      <div>
-        <div style="font-size: 40px; margin-bottom: 15px;">🔵</div>
-        <h3 style="font-size: 22px; color: #ffffff; margin-bottom: 15px;">Opção 2: TeamViewer</h3>
-        <p style="color: #cccccc; font-size: 14px; line-height: 1.6; margin-bottom: 25px;">
-          Excelente alternativa de padrão corporativo mundial para estabelecer conexões criptografadas de ponta a ponta.
-        </p>
-      </div>
-      <a href="https://www.teamviewer.com/pt-br/download/windows/" target="_blank" class="btn btn-secondary" style="border-color: #3b82f6; color: #3b82f6; width: 100%; text-align: center;">
-        Baixar TeamViewer
-      </a>
+  <div id="tech-chatbot" class="chatbot-window" role="dialog" aria-label="Assistente Virtual CS Tech">
+    <div class="chatbot-header">
+      <span><i class="fa-solid fa-robot"></i> Assistente CS Tech</span>
+      <button onclick="toggleChatbot(event)" class="close-chat-btn" aria-label="Fechar assistente">&times;</button>
     </div>
-
-  </div>
-</section>
-
-<section id="suporte">
-  <div class="section-title">
-    <h2>Como Funciona a Parceria / Suporte</h2>
-    <p>Agilidade e facilidade no alinhamento para resolver problemas críticos em poucos minutos.</p>
-  </div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-number">1</div>
-      <h3>Abertura / Acionamento</h3>
-      <p>Você entra em contato, envia o escopo do chamado ou necessidade de Field Service.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">2</div>
-      <h3>Alinhamento Técnico</h3>
-      <p>Ajustamos o roteiro, ferramentas necessárias, agendamento ou acesso remoto imediato.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">3</div>
-      <h3>Execução em Campo</h3>
-      <p>Realização do suporte local reportando em tempo real à matriz ou central de monitoramento.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">4</div>
-      <h3>Encerramento e Report</h3>
-      <p>Equipamento ou link operando 100% com validação de funcionamento e documentação do serviço.</p>
+    <div id="chatbot-body" class="chatbot-body">
+      <div id="chatbot-content"></div>
     </div>
   </div>
-</section>
 
-<section id="diferenciais" style="background: #0b111e;">
-  <div class="section-title">
-    <h2>Por Que Escolher a CS Suporte Tech?</h2>
-    <p>Atendimento profissional, compliance corporativo e foco na resolução definitiva do problema.</p>
-  </div>
-  <div class="differentials">
-    <div class="diff-item">✔ Atendimento técnico terceirizado para empresas que necessitam de suporte local em Minas Gerais</div>
-    <div class="diff-item">✔ Perfeito alinhamento com NOC, Service Desk e Centrais de TI fora do estado</div>
-    <div class="diff-item">✔ Suporte de campo ágil para integradores com operação nacional e redes de varejo</div>
-    <div class="diff-item">✔ Profissional experiente em hardware avançado, soldagem, eletrônica e redes</div>
-    <div class="diff-item">✔ Pontualidade, vestimenta adequada e postura ética frente ao seu cliente final</div>
-    <div class="diff-item">✔ Emissão de relatórios e documentação técnica conforme sua necessidade</div>
-  </div>
-</section>
+  <button class="whatsapp-flutuante" onclick="toggleChatbot(event)" aria-label="Abrir chat de suporte">
+    <i class="fa-solid fa-comments"></i>
+  </button>
 
-<section id="apresentacao">
-  <div class="section-title">
-    <h2>Conheça a CS Suporte Tech</h2>
-    <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento.</p>
-  </div>
-  <div style="max-width:800px;margin:auto;box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius:15px;">
-    <video controls preload="metadata" style="width:100%; display: block; border-radius:15px; background: #000;">
-      <source src="videos/video.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-  </div>
-</section>
-
-<section id="galeria" style="background: #0b111e;">
-  <div class="section-title">
-    <h2>Galeria de Atendimentos</h2>
-    <p>Alguns trabalhos em campo realizados em parcerias corporativas e Field Service.</p>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-    <div style="box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 15px; background: #0f1626; padding: 10px; border: 1px solid rgba(255,255,255,0.05);">
-      <img src="imagens/casas bahia.jpg" style="width:100%;border-radius:10px;">
-      <p style="text-align:center;margin-top:10px; font-weight: 500; color: #ffffff;">Atendimento técnico em loja / Varejo nacional</p>
-    </div>
-    <img src="imagens/ferramentas.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <img src="imagens/manutenção placa.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <img src="imagens/toten.jpg" style="width:100%;border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>O Que Nossos Parceiros Dizem</h2>
-  </div>
-  <div class="testimonials">
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Excelente parceiro de Field Service. Atendeu nosso chamado corporativo com muita pontualidade, reportando o status ao nosso NOC em tempo real.”</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Sempre acionamos a CS Suporte Tech para atendimentos na região da Zona da Mata. Profissional ético e muito técnico.”</p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <p>“Conhecimento técnico diferenciado em eletrônica e redes. Resolve os problemas em campo de verdade.”</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="cta">
-    <h2>Precisa de um Técnico de Campo Local?</h2>
-    <p>Seja para suporte emergencial ou parcerias / reuniões corporativas de Field Service, conte com os seus "olhos e mãos" na infraestrutura de TI da região.</p>
-    <button onclick="toggleChatbot(event)" class="btn btn-primary">Acionar Suporte Técnico</button>
-  </div>
-</section>
-
-<footer id="contato">
-  <h2>CS Suporte Tech</h2>
-  <br>
-  <p>📍 Cataguases - MG</p>
-  <p style="margin-top: 10px; line-height: 1.6; color: #aaaaaa;">Atendimento presencial e Field Service em Cataguases (incluindo Aracati e distritos), Leopoldina, Muriaé, Ubá, Além Paraíba, Astolfo Dutra, Dona Eusébia, Guidoval, Laranjal, Miraí, Piraúba, Recreio, Rodeiro, Santana de Cataguases e toda a região da Zona da Mata.</p>
-  <p style="margin-top: 10px; color: #aaaaaa;">Suporte remoto para empresas e clientes em todo o Brasil.</p>
-  <p style="margin-top: 10px; color: #aaaaaa;">Prestação de serviços especializada em TI corporativa e residencial.</p>
-  <br>
-  <p style="font-weight: 600; color: #00bfff;">WhatsApp: (32) 99846-3727</p>
-  <p style="font-weight: 600; color: #00bfff;">Email: cssuporttech@grumari.com.br</p>
-  <p style="margin-top: 15px; color: #aaaaaa; font-size: 14px;">CNPJ: 26.275.653/0001-77</p>
-</footer>
-
-<div id="tech-chatbot" style="position: fixed; bottom: 110px; right: 25px; width: 320px; background: #0f1626; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); font-family: 'Poppins', sans-serif; z-index: 999999; display: none; flex-direction: column; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-    <div style="background: #00bfff; color: #070b14; padding: 15px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <span>🤖 Assistente CS Tech</span>
-        <button onclick="toggleChatbot(event)" style="background: none; border: none; color: #070b14; font-size: 22px; cursor: pointer; font-weight: bold;">×</button>
-    </div>
-    <div id="chatbot-body" style="padding: 15px; max-height: 320px; overflow-y: auto; font-size: 14px; line-height: 1.5; color: #f3f4f6;">
-        <div id="chatbot-content"></div>
-    </div>
-</div>
-
-<button class="whatsapp-flutuante" onclick="toggleChatbot(event)">
-  💬
-</button>
-
-<script>
-function carregarMenuInicial() {
-    var content = document.getElementById('chatbot-content');
-    content.innerHTML = `
-        <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: left; font-weight: 500; color: #e2e8f0;">
-            Olá! Bem-vindo à CS Suporte Tech. Como podemos ajudar hoje? Selecione uma opção:
+  <script>
+    function carregarMenuInicial() {
+      var content = document.getElementById('chatbot-content');
+      content.innerHTML = `
+        <div class="chat-msg-bot">
+          Olá! Bem-vindo à CS Suporte Tech. Como podemos ajudar o seu negócio hoje? Selecione uma das opções abaixo:
         </div>
-        <div id="chatbot-options">
-            <button onclick="escolherOpcao('field_service')" style="display: block; width: 100%; background: #00bfff; border: none; color: #070b14; padding: 12px; margin-bottom: 10px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 600; font-family: inherit; box-shadow: 0 2px 8px rgba(0,191,255,0.2);">🏢 Parceria / Field Service Técnico</button>
-            <button onclick="escolherOpcao('hardware')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">💻 Hardware (Equipamento / Peças)</button>
-            <button onclick="escolherOpcao('software')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">⚙️ Software / Sistema Lento</button>
-            <button onclick="escolherOpcao('redes')" style="display: block; width: 100%; background: #1e293b; border: 1px solid rgba(255,255,255,0.1); color: #fff; padding: 10px; margin-bottom: 8px; border-radius: 6px; cursor: pointer; text-align: left; font-weight: 500; font-family: inherit;">🌐 Redes / Infraestrutura / Wi-Fi</button>
+        <div id="chatbot-options" class="chat-options-container">
+          <button onclick="escolherOpcao('field_service')" class="chat-opt-btn primary-opt"><i class="fa-solid fa-building"></i> Parceria / Field Service Técnico</button>
+          <button onclick="escolherOpcao('hardware')" class="chat-opt-btn"><i class="fa-solid fa-microchip"></i> Hardware (Equipamento / Peças)</button>
+          <button onclick="escolherOpcao('software')" class="chat-opt-btn"><i class="fa-solid fa-window-restore"></i> Software / Sistema Lento</button>
+          <button onclick="escolherOpcao('redes')" class="chat-opt-btn"><i class="fa-solid fa-wifi"></i> Redes / Infraestrutura / Wi-Fi</button>
         </div>
-    `;
-}
+      `;
+    }
 
-carregarMenuInicial();
+    carregarMenuInicial();
 
-function toggleChatbot(e) {
-    if (e) {
+    function toggleChatbot(e) {
+      if (e) {
         e.preventDefault();
         e.stopPropagation();
+      }
+      var chat = document.getElementById('tech-chatbot');
+      if (chat.classList.contains('active')) {
+        chat.classList.remove('active');
+        document.querySelector('.mobile-menu-toggle').setAttribute('aria-expanded', 'false');
+      } else {
+        chat.classList.add('active');
+      }
     }
-    var chat = document.getElementById('tech-chatbot');
-    if (chat.style.display === 'none' || chat.style.display === '') {
-        chat.style.display = 'flex';
-    } else {
-        chat.style.display = 'none';
-    }
-}
 
-function escolherOpcao(opcao) {
-    var content = document.getElementById('chatbot-content');
-    var body = document.getElementById('chatbot-body');
-    
-    var textoCliente = "";
-    if(opcao === 'field_service') textoCliente = "🏢 Parceria / Field Service Técnico";
-    if(opcao === 'hardware') textoCliente = "💻 Hardware (Equipamento / Peças)";
-    if(opcao === 'software') textoCliente = "⚙️ Software / Sistema Lento";
-    if(opcao === 'redes') textoCliente = "🌐 Redes / Infraestrutura / Wi-Fi";
-    
-    content.innerHTML = `<div style="background: #00bfff; color: #070b14; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: right; margin-left: 30px; font-weight: 500;">${textoCliente}</div>`;
-    
-    setTimeout(function() {
-        if (opcao === 'field_service') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Excelente! Atuamos como seu <strong>braço operacional e suporte local de campo</strong> na região. Clique abaixo para alinhar escopo, SLA e credenciamento diretamente no WhatsApp corporativo.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Gostaria%20de%20alinhar%20um%20atendimento%20de%20Field%20Service%20/%20Parceria%20técnica%20na%20sua%20região." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Falar sobre Field Service</a>
-            `;
-        } else if (opcao === 'software') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Perfeito! Já tentou reiniciar o equipamento? Se o problem persistir, clique no botão abaixo para iniciar o suporte e assistência técnica no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Meu%20computador%20está%20lento/com%20problemas%20de%20software%20e%20já%20tentei%20reiniciar." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Iniciar Suporte via WhatsApp</a>
-            `;
-        } else if (opcao === 'hardware') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Entendido. Falhas de hardware necessitam de avaliação ou reparo em bancada dos componentes. Clique abaixo para detalhar o defeito no WhatsApp.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20um%20problema%20de%20Hardware%20no%20meu%20equipamento." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Solicitar Manutenção</a>
-            `;
-        } else if (opcao === 'redes') {
-            content.innerHTML += `
-                <div style="background: #1e293b; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; color: #e2e8f0;">
-                    Certo! Problemas de conectividade ou rede podem envolver ativos ou cabeamento de rede. Clique abaixo para acionar o suporte técnico.
-                </div>
-                <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/Wi-Fi." target="_blank" style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 10px; font-size: 15px;">Ajustar Conexão de Rede</a>
-            `;
-        }
-        
-        content.innerHTML += `
-            <button onclick="carregarMenuInicial()" style="display: block; width: 100%; background: none; border: none; color: #aaa; text-align: center; padding: 8px; margin-top: 15px; cursor: pointer; font-size: 13px; text-decoration: underline; font-family: inherit; font-weight: 500;">&larr; Voltar para o menu</button>
-        `;
-        
-        body.scrollTop = body.scrollHeight;
-    }, 500);
-}
-</script>
-
-</body>
-</html>
-
-
+    function escolherOpcao(opcao) {
+      var content = document.getElementById('chatbot-content');
+      var body = document.getElementById('chatbot-body');
+      
+      var textoCliente = "";
+      if(opcao === 'field_service') textoCliente = "🏢 Parceria / Field Service Técnico";
+      if(opcao === 'hardware') textoCliente = "💻 Hardware (Equipamento / Peças)";
+      if(opcao === 'software') textoCliente = "⚙️ Software / Sistema Lento";
+      if(opcao === 'redes') textoCliente = "🌐 Redes / Infraestrutura / Wi-Fi";
