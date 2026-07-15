@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CS Suporte Tech | Field Service & Central Help Desk B2C 24/7</title>
   
+  <!-- SEO & Tags Sociais -->
   <meta name="description" content="Operação de peso com suporte de campo e Central Help Desk B2C N1 24/7/365. Parceiro homologado Angelus Seguros e Grumari Tecnologia." />
   <meta name="robots" content="index, follow" />
 
+  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5K7NWKWR1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,6 +18,7 @@
     gtag('config', 'G-E5K7NWKWR1');
   </script>
 
+  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -80,6 +83,12 @@
       font-size: 26px;
       font-weight: 700;
       color: var(--cor-cyan);
+      cursor: pointer;
+      transition: var(--transicao);
+    }
+
+    .logo:hover {
+      color: var(--cor-cyan-hover);
     }
 
     nav a {
@@ -462,22 +471,6 @@
       margin-top: 3px;
     }
 
-    /* VÍDEO INSTITUCIONAL */
-    .video-container {
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      border-radius: 15px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .video-container video {
-      width: 100%;
-      display: block;
-      background: #000;
-    }
-
     /* GALERIA DE IMAGENS CORRIGIDA */
     .gallery-section {
       background: var(--bg-card-alt);
@@ -763,8 +756,9 @@
 </head>
 <body>
 
+  <!-- CABEÇALHO -->
   <header>
-    <div class="logo">CS Suporte Tech</div>
+    <a href="#" class="logo">CS Suporte Tech</a>
     <nav>
       <a href="#parceiros">Parcerias</a>
       <a href="#servicos">Serviços</a>
@@ -774,6 +768,7 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Sua Operação Não Pode Parar.<br><span>Tenha Suporte de Peso, Sempre.</span></h1>
@@ -789,6 +784,7 @@
     </div>
   </section>
 
+  <!-- PARCEIROS E HOMOLOGAÇÃO -->
   <section id="parceiros" class="partners-section">
     <div class="section-title">
       <p class="section-subtitle">Parceria Estratégica Homologada</p>
@@ -798,18 +794,21 @@
     <div class="partners-container">
       <div class="homologation-grid">
         
+        <!-- Angelus Seguros -->
         <div class="partner-brand-card">
           <span class="partner-badge">Parceiro Homologado</span>
           <img src="imagens/angelus.png" alt="Angelus Seguros" class="partner-logo" onerror="this.src='https://via.placeholder.com/180x70/0f1626/00bfff?text=Angelus+Seguros'">
           <p>Operação unificada de suporte técnico em TI de alta confiabilidade para garantir a estabilidade das operações e a proteção de dados dos segurados.</p>
         </div>
 
+        <!-- Grumari Tecnologia -->
         <div class="partner-brand-card">
           <span class="partner-badge">Aliança Estratégica</span>
           <img src="imagens/grumari.png" alt="Grumari Tecnologia" class="partner-logo" onerror="this.src='https://via.placeholder.com/180x70/0f1626/00bfff?text=Grumari+Tecnologia'">
           <p>Integração de serviços de engenharia de redes, NOC corporativo, suporte N1 especializado e inteligência de Field Service de alta complexidade.</p>
         </div>
 
+        <!-- AOLBR -->
         <div class="partner-brand-card">
           <span class="partner-badge">Cliente & Compliance</span>
           <img src="imagens/aolbr.png" alt="AOLBR" class="partner-logo" onerror="this.src='https://via.placeholder.com/180x70/0f1626/00bfff?text=AOLBR'">
@@ -820,6 +819,7 @@
     </div>
   </section>
 
+  <!-- SERVIÇOS -->
   <section id="servicos">
     <div class="section-title">
       <h2>Catálogo Geral de Soluções</h2>
@@ -828,13 +828,14 @@
 
     <div class="services-grid">
       
+      <!-- CATEGORIA: CENTRAL HELP DESK B2C -->
       <h2 class="services-category-title"><i class="fa-solid fa-headset"></i> Central Help Desk B2C N1 (Operação 24/7/365)</h2>
 
       <div class="service-card">
-        <span class="service-badge">N1 Express</span>
+        <span class="service-badge">N1 Remoto</span>
         <i class="fa-solid fa-gauge-high"></i>
         <h3>Otimização & Diagnóstico Remoto</h3>
-        <p>Solução definitiva de lentidões, travamentos, infecções por malware e otimização total do sistema para restaurar a performance imediata do seu equipamento.</p>
+        <p>Solução definitiva de lentidões, travamentos e otimização total do sistema para restaurar a performance imediata do seu equipamento.</p>
       </div>
 
       <div class="service-card">
@@ -865,32 +866,34 @@
         <p>Todo o fluxo de suporte e acesso remoto é executado de forma estritamente segura, auditada e em plena conformidade com as regras da Lei Geral de Proteção de Dados.</p>
       </div>
 
+      <!-- CATEGORIA: FIELD SERVICE -->
       <h2 class="services-category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Field Service & Infraestrutura Local</h2>
 
       <div class="service-card">
         <span class="service-badge">Presencial</span>
         <i class="fa-solid fa-network-wired"></i>
         <h3>Suporte Técnico On-site</h3>
-        <p>Atendimento técnico local sob demanda em Cataguases e região para manutenção física de servidores, computadores, racks, ativos e reparos em campo.</p>
+        <p>Atendimento técnico de campo local sob demanda em Cataguases e região para manutenção de computadores, setups e ativos de infraestrutura corporativa ou residencial.</p>
       </div>
 
       <div class="service-card">
         <span class="service-badge">Redes</span>
         <i class="fa-solid fa-route"></i>
-        <h3>Infraestrutura de Redes</h3>
-        <p>Projetos, configuração estruturada de roteadores corporativos, switches gerenciáveis e access points para máxima cobertura Wi-Fi.</p>
+        <h3>Suporte Básico de Rede</h3>
+        <p>Auxílio focado na troca de equipamentos de redes antigos, configuração de modens/roteadores domésticos e clipagem profissional de cabos de rede.</p>
       </div>
 
       <div class="service-card">
-        <span class="service-badge">Laboratório</span>
+        <span class="service-badge">Manutenção</span>
         <i class="fa-solid fa-microchip"></i>
-        <h3>Hardware Avançado</h3>
-        <p>Análises eletrônicas de alta precisão em placas-mãe de computadores e notebooks, reparos de circuitos e soldagem profissional.</p>
+        <h3>Hardware (Notebook & Desktop)</h3>
+        <p>Diagnóstico estruturado, limpeza preventiva profunda, troca de pastas térmicas, upgrade de memória RAM/SSD e suporte técnico em hardware em geral.</p>
       </div>
 
     </div>
   </section>
 
+  <!-- SUPORTE REMOTO INSTANTÂNEO -->
   <section id="suporte-remoto" class="remote-section">
     <div class="section-title">
       <p class="section-subtitle">Acesso Imediato</p>
@@ -921,6 +924,7 @@
     </div>
   </section>
 
+  <!-- DIFERENCIAIS -->
   <section id="diferenciais" class="differentials-section">
     <div class="section-title">
       <h2>Por Que Escolher a CS Suporte Tech?</h2>
@@ -936,19 +940,7 @@
     </div>
   </section>
 
-  <section id="apresentacao">
-    <div class="section-title">
-      <h2>Conheça a CS Suporte Tech</h2>
-      <p>Assista ao vídeo de apresentação da nossa estrutura de atendimento.</p>
-    </div>
-    <div class="video-container">
-      <video controls preload="metadata">
-        <source src="videos/video.mp4" type="video/mp4">
-        Seu navegador não suporta a reprodução deste vídeo.
-      </video>
-    </div>
-  </section>
-
+  <!-- GALERIA -->
   <section id="galeria" class="gallery-section">
     <div class="section-title">
       <h2>Galeria de Atendimentos</h2>
@@ -974,6 +966,7 @@
     </div>
   </section>
 
+  <!-- DEPOIMENTOS -->
   <section>
     <div class="section-title">
       <h2>O Que Nossos Parceiros Dizem</h2>
@@ -994,6 +987,7 @@
     </div>
   </section>
 
+  <!-- CALL TO ACTION -->
   <section>
     <div class="cta-box">
       <h2>Sua Operação Não Pode Parar!</h2>
@@ -1004,6 +998,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer id="contato">
     <h2>CS Suporte Tech</h2>
     <p>📍 Cataguases - MG</p>
@@ -1014,6 +1009,7 @@
     <p class="cnpj">CNPJ: 26.275.653/0001-77 | Prestação de serviços de TI corporativa e residencial.</p>
   </footer>
 
+  <!-- CHATBOT -->
   <div id="tech-chatbot" class="chatbot-window">
     <div class="chatbot-header">
       <span>🤖 Assistente CS Tech</span>
@@ -1024,10 +1020,12 @@
     </div>
   </div>
 
+  <!-- WHATSAPP FLUTUANTE -->
   <button class="whatsapp-flutuante" onclick="toggleChatbot(event)">
     <i class="fa-solid fa-comments"></i>
   </button>
 
+  <!-- SCRIPT DO CHATBOT -->
   <script>
     function carregarMenuInicial() {
       var content = document.getElementById('chatbot-content');
@@ -1038,8 +1036,8 @@
         <div id="chatbot-options">
           <button onclick="escolherOpcao('field_service')" class="chat-btn primary-btn"><i class="fa-solid fa-handshake"></i> Parceria / Field Service Técnico</button>
           <button onclick="escolherOpcao('n1_helpdesk')" class="chat-btn"><i class="fa-solid fa-headset"></i> Central Help Desk B2C (N1)</button>
-          <button onclick="escolherOpcao('hardware')" class="chat-btn"><i class="fa-solid fa-microchip"></i> Hardware (Equipamento / Peças)</button>
-          <button onclick="escolherOpcao('redes')" class="chat-btn"><i class="fa-solid fa-wifi"></i> Redes & Conectividade</button>
+          <button onclick="escolherOpcao('hardware')" class="chat-btn"><i class="fa-solid fa-microchip"></i> Hardware (Notebook / Desktop)</button>
+          <button onclick="escolherOpcao('redes')" class="chat-btn"><i class="fa-solid fa-wifi"></i> Suporte Básico de Redes</button>
         </div>
       `;
     }
@@ -1066,8 +1064,8 @@
       var textoCliente = "";
       if(opcao === 'field_service') textoCliente = "🏢 Parceria / Field Service Técnico";
       if(opcao === 'n1_helpdesk') textoCliente = "📞 Central Help Desk B2C N1";
-      if(opcao === 'hardware') textoCliente = "💻 Hardware (Equipamento / Peças)";
-      if(opcao === 'redes') textoCliente = "🌐 Redes & Conectividade";
+      if(opcao === 'hardware') textoCliente = "💻 Hardware (Notebook / Desktop)";
+      if(opcao === 'redes') textoCliente = "🌐 Suporte Básico de Redes";
       
       content.innerHTML = `<div class="chat-user-msg">${textoCliente}</div>`;
       
@@ -1089,16 +1087,16 @@
         } else if (opcao === 'hardware') {
           content.innerHTML += `
             <div class="chat-msg">
-              Entendido. Falhas físicas de hardware necessitam de diagnósticos de circuitos ou substituições. Clique abaixo para detalhar o defeito ao nosso técnico.
+              Entendido. Realizamos substituições de peças, upgrades de RAM/SSD, limpezas preventivas profundas e diagnósticos gerais em notebook e desktop. Toque abaixo para acionar.
             </div>
-            <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20um%20problema%20de%20Hardware%20no%20meu%20equipamento." target="_blank" class="whatsapp-action-btn">Solicitar Reparo Físico</a>
+            <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20precisando%20de%20suporte%20técnico%20em%20hardware%20(notebook/desktop)." target="_blank" class="whatsapp-action-btn">Solicitar Suporte Hardware</a>
           `;
         } else if (opcao === 'redes') {
           content.innerHTML += `
             <div class="chat-msg">
-              Certo! Problemas de conexão Wi-Fi, lentidão na internet ou cabeamento estruturado. Fale agora diretamente com nosso engenheiro de redes.
+              Certo! Atuamos com suporte de rede local básico: troca de roteadores, modens, switches de mesa e clipagem profissional de patch cords (cabos).
             </div>
-            <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/Wi-Fi." target="_blank" class="whatsapp-action-btn">Ajustar Minha Rede</a>
+            <a href="https://wa.me/5532998463727?text=Olá,%20Cristiano.%20Estou%20com%20problemas%20na%20minha%20rede/preciso%20de%20clipagem%20ou%20troca%20de%20equipamento." target="_blank" class="whatsapp-action-btn">Ajustar Minha Rede</a>
           `;
         }
         
